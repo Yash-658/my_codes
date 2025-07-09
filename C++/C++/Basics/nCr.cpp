@@ -19,3 +19,5 @@ int main(){
     cout<<nCr(n,r);
 return 0;
 }
+
+// ahaha

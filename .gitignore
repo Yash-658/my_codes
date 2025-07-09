@@ -1,1 +1,11 @@
-sample.exe
+# Ignore build files
+*.exe
+*.obj
+*.out
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore temporary files
+*.log
+*.tmp

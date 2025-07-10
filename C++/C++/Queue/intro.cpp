@@ -4,18 +4,21 @@
 #include<vector>
 using namespace std;
 
-int main(){
-    queue<int> q;
-    q.push(5);
-    q.push(6);
-    q.push(7);
-    q.push(8);
-    q.push(9);
 
-    while(!q.empty()) {
-        cout<<q.front();
-        q.pop();
-    }
+// stl
+// int main(){
+//     queue<int> q;
+//     q.push(5);
+//     q.push(6);
+//     q.push(7);
+//     q.push(8);
+//     q.push(9);
+
+//     while(!q.empty()) {
+//         cout<<q.front();
+//         q.pop();
+//     }
     
-return 0;
-}
+// return 0; 
+// }
+

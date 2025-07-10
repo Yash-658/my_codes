@@ -1,5 +1,6 @@
 // circular queue
 
+// I can also make it work if I use a count variable too, so that it tracks how many elements are currently present in the queue, and i can update it whenever I pop or push, and when count == size, ie the queue is full, and if count ==0, is empty~
 
 #include <bits/stdc++.h> 
 class CircularQueue{
@@ -7,40 +8,59 @@ class CircularQueue{
     int front;
     int rear;
     int size;
-    bool is_full;
+
     public:
     // Initialize your data structure.
     CircularQueue(int n){
         size = n;
         arr = new int[size];
-        front = 0;
-        rear = 0;
-        is_full = false;
+        front = -1;
+        rear = -1;
     }
 
     // Enqueues 'X' into the queue. Returns true if it gets pushed into the stack, and false otherwise.
     bool enqueue(int value){
-        if(is_full) return false;
+        // if full
+        if((rear+1)%size == front) return false;
+
+        // if it's the first element~
+        if(front == -1) {
+            front = rear = 0;
+        }
+
+        // edge case
+        else if(rear == size-1) {
+            rear = 0;
+        }
+
+        // normal case
+        else{
+            rear++;
+        }
 
         arr[rear] = value;
-        rear = (rear+1) % size;
-        
-        // now check if rear == front, cuz if it is, the queue is full~
-        if(rear == front) is_full = true;
         return true;
     }
 
     // Dequeues top element from queue. Returns -1 if the stack is empty, otherwise returns the popped element.
     int dequeue(){
-        if(front == rear && !is_full) {
-            // this means it's empty
-            return -1;
+        if(front == -1) return -1;
+
+        int popped = arr[front];
+
+        // single element
+        if(front == rear) {
+            front = rear = -1;
         }
 
-        if(is_full == true) is_full = false;
+        // edge case
+        else if(front == size-1) front = 0;
 
-        int temp = arr[front];
-        front = (front+1) % size;
-        return temp;
+        // normal case
+        else {
+            front++;
+        }
+        
+        return popped;
     }
 };

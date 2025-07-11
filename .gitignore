@@ -9,3 +9,6 @@
 # Ignore temporary files
 *.log
 *.tmp
+
+# ignore sample
+sample.cpp

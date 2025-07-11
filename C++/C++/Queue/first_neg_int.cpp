@@ -58,7 +58,7 @@
 //                 firstNegInd++;
 //             }
             
-//             // check if firstNegInd is -ve and in bounds~
+//             // check if firstNegInd is -ve and in bounds(cuz in last window searching, it's possible that it got out of bounds)
 //             if(firstNegInd < n && arr[firstNegInd] < 0) {
 //                 ans.push_back(arr[firstNegInd]);
 //             }

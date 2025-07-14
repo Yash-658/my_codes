@@ -22,10 +22,11 @@ b_node* buildTree(b_node *root) {
     int data;
     cout << "Enter data to insert: ";
     cin >> data;
-    root = new b_node(data);
 
     // -1 indicates NULL~
     if(data == -1) return NULL;
+
+    root = new b_node(data);
 
     cout<<"Enter data for inserting in the left of "<<data<<endl;
     root->left = buildTree(root->left);
@@ -142,15 +143,15 @@ void buildFromLevelOrder(b_node* &root) {
 int main(){
     b_node *root;
     /* 1 2 3 -1 -1 4 -1 -1 5 6 -1 -1 -1 */ 
-    // root = buildTree(root);
-    // cout<<endl;
-    // cout<<"Printing tree breadth first~"<<endl;
-    // levelOrderTraversal(root);
+    root = buildTree(root);
+    cout<<endl;
+    cout<<"Printing tree breadth first~"<<endl;
+    levelOrderTraversal(root);
     // reverseLevelOrderTraversal(root);
 
-    buildFromLevelOrder(root);
-    cout<<endl;
-    levelOrderTraversal(root);
+    // buildFromLevelOrder(root);
+    // cout<<endl;
+    // levelOrderTraversal(root);
 
 
 return 0;

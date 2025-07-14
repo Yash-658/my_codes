@@ -105,13 +105,53 @@ void reverseLevelOrderTraversal(b_node *root) {
     }
 }
 
+void buildFromLevelOrder(b_node* &root) {
+    int data;
+    cout<< "Enter data to insert at root node: ";
+    cin >> data;
+    root = new b_node(data);
+
+    queue<b_node*> q;
+    q.push(root);
+
+    while(!q.empty()) {
+        b_node *temp = q.front();
+        q.pop();
+
+        int left_value;
+        cout<<"Enter left node value for "<<temp->data<<": ";
+        cin>>left_value;
+
+        if(left_value != -1) {
+            temp->left = new b_node(left_value);
+            q.push(temp->left);
+        }
+        
+
+        int right_value;
+        cout<<"Enter right node value for "<<temp->data<<": ";
+        cin>>right_value;
+
+        if(right_value != -1) {
+            temp->right = new b_node(right_value);
+            q.push(temp->right);
+        }
+    }
+}
+
 int main(){
     b_node *root;
     /* 1 2 3 -1 -1 4 -1 -1 5 6 -1 -1 -1 */ 
-    root = buildTree(root);
-    cout<<endl;
-    cout<<"Printing tree breadth first~"<<endl;
+    // root = buildTree(root);
+    // cout<<endl;
+    // cout<<"Printing tree breadth first~"<<endl;
     // levelOrderTraversal(root);
-    reverseLevelOrderTraversal(root);
+    // reverseLevelOrderTraversal(root);
+
+    buildFromLevelOrder(root);
+    cout<<endl;
+    levelOrderTraversal(root);
+
+
 return 0;
 }

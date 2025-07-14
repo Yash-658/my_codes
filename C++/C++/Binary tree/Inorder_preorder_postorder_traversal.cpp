@@ -17,6 +17,7 @@ R -> right part mai jao
 
 */
 
+// how will you do this iteratively?
 
 void Inorder(b_node *root) {
     // LNR

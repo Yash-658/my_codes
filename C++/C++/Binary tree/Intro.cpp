@@ -36,7 +36,7 @@ b_node* buildTree(b_node *root) {
     return root;
 }
 
-void levelOrderTraversal(b_node *root) {             // Breadth First Traversal (prints tree level wise)
+void levelOrderTraversal(b_node *root) {             // Breadth First Search (BFS) (prints tree level wise)
     queue<b_node*> q;
     q.push(root);
     q.push(NULL);
@@ -51,7 +51,7 @@ void levelOrderTraversal(b_node *root) {             // Breadth First Traversal 
             continue;
         }
 
-        cout<<temp->data;
+        cout<<temp->data<<" ";
 
         if(temp->left) {
             q.push(temp->left);

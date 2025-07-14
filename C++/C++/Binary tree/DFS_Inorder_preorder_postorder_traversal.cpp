@@ -19,7 +19,7 @@ R -> right part mai jao
 
 // how will you do this iteratively?
 
-void Inorder(b_node *root) {
+void Inorder(node *root) {
     // LNR
     if(root == NULL) {
         return;
@@ -30,7 +30,7 @@ void Inorder(b_node *root) {
     Inorder(root->right);
 }
 
-void Postorder(b_node *root) {
+void Postorder(node *root) {
     // LRN
     if(root == NULL) {
         return;
@@ -41,7 +41,7 @@ void Postorder(b_node *root) {
     cout<<root->data<<" ";
 }
 
-void Preorder(b_node *root) {
+void Preorder(node *root) {
     // NLR
     if(root == NULL) {
         return;

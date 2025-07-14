@@ -1,5 +1,5 @@
 #include<iostream>
-#include<string>
+#include<stack>
 #include<algorithm>
 #include<vector>
 #include<queue>
@@ -48,28 +48,70 @@ void levelOrderTraversal(b_node *root) {             // Breadth First Search (BF
         if(temp == NULL) {                           // this NULL logic is just for the separator, to print different levels at different lines~
             cout<<endl;
             if(!q.empty()) q.push(NULL);
-            continue;
         }
 
-        cout<<temp->data<<" ";
+        else {
+            cout<<temp->data<<" ";
 
-        if(temp->left) {
-            q.push(temp->left);
-        }
+            if(temp->left) {
+                q.push(temp->left);
+            }
 
-        if(temp->right) {
-            q.push(temp->right);
+            if(temp->right) {
+                q.push(temp->right);
+            }
         }
     }
 }
 
+void reverseLevelOrderTraversal(b_node *root) {
+    queue<b_node*> q;
+    stack<int> st;
+    q.push(root);
+    q.push(NULL);
+
+    while(!q.empty()) {
+        b_node *temp = q.front();
+        q.pop();
+
+        if(temp == NULL) {                           // this NULL logic is just for the separator, to print different levels at different lines~
+            st.push(-1);
+            if(!q.empty()) q.push(NULL);
+        }
+
+        else {
+            st.push(temp->data);
+
+            if(temp->right) {
+                q.push(temp->right);
+            }
+
+            if(temp->left) {
+                q.push(temp->left);
+            }
+        }
+    }
+
+    while(!st.empty()) {
+        if(st.top() == -1) {
+            cout<<endl;
+        }
+
+        else {
+            cout<<st.top()<<" ";
+        }
+
+        st.pop();
+    }
+}
 
 int main(){
     b_node *root;
-    // 1 2 3 -1 -1 4 -1 -1 5 6 -1 -1 -1
+    /* 1 2 3 -1 -1 4 -1 -1 5 6 -1 -1 -1 */ 
     root = buildTree(root);
     cout<<endl;
     cout<<"Printing tree breadth first~"<<endl;
-    levelOrderTraversal(root);
+    // levelOrderTraversal(root);
+    reverseLevelOrderTraversal(root);
 return 0;
 }

@@ -147,6 +147,7 @@ int main(){
     cout<<endl;
     cout<<"Printing tree breadth first~"<<endl;
     levelOrderTraversal(root);
+    
     // reverseLevelOrderTraversal(root);
 
     // buildFromLevelOrder(root);

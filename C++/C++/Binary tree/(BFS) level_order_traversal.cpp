@@ -5,20 +5,20 @@
 #include<queue>
 using namespace std;
 
-class b_node {
+class node {
     public: 
     int data;
-    b_node *left;
-    b_node *right;
+    node *left;
+    node *right;
 
-    b_node(int data) {
+    node(int data) {
         this->data = data;
         left = NULL;
         right = NULL;
     }
 };
 
-b_node* buildTree(b_node *root) {
+node* buildTree(node *root) {
     int data;
     cout << "Enter data to insert: ";
     cin >> data;
@@ -26,7 +26,7 @@ b_node* buildTree(b_node *root) {
     // -1 indicates NULL~
     if(data == -1) return NULL;
 
-    root = new b_node(data);
+    root = new node(data);
 
     cout<<"Enter data for inserting in the left of "<<data<<endl;
     root->left = buildTree(root->left);
@@ -37,13 +37,13 @@ b_node* buildTree(b_node *root) {
     return root;
 }
 
-void levelOrderTraversal(b_node *root) {             // Breadth First Search (BFS) (prints tree level wise)
-    queue<b_node*> q;
+void levelOrderTraversal(node *root) {             // Breadth First Search (BFS) (prints tree level wise)
+    queue<node*> q;
     q.push(root);
     q.push(NULL);
 
     while(!q.empty()) {
-        b_node *temp = q.front();
+        node *temp = q.front();
         q.pop();
 
         if(temp == NULL) {                           // this NULL logic is just for the separator, to print different levels at different lines~
@@ -65,14 +65,14 @@ void levelOrderTraversal(b_node *root) {             // Breadth First Search (BF
     }
 }
 
-void reverseLevelOrderTraversal(b_node *root) {
-    queue<b_node*> q;
+void reverseLevelOrderTraversal(node *root) {
+    queue<node*> q;
     stack<int> st;
     q.push(root);
     q.push(NULL);
 
     while(!q.empty()) {
-        b_node *temp = q.front();
+        node *temp = q.front();
         q.pop();
 
         if(temp == NULL) {                           // this NULL logic is just for the separator, to print different levels at different lines~
@@ -106,17 +106,17 @@ void reverseLevelOrderTraversal(b_node *root) {
     }
 }
 
-void buildFromLevelOrder(b_node* &root) {
+void buildFromLevelOrder(node* &root) {
     int data;
     cout<< "Enter data to insert at root node: ";
     cin >> data;
-    root = new b_node(data);
+    root = new node(data);
 
-    queue<b_node*> q;
+    queue<node*> q;
     q.push(root);
 
     while(!q.empty()) {
-        b_node *temp = q.front();
+        node *temp = q.front();
         q.pop();
 
         int left_value;
@@ -124,7 +124,7 @@ void buildFromLevelOrder(b_node* &root) {
         cin>>left_value;
 
         if(left_value != -1) {
-            temp->left = new b_node(left_value);
+            temp->left = new node(left_value);
             q.push(temp->left);
         }
         
@@ -134,14 +134,14 @@ void buildFromLevelOrder(b_node* &root) {
         cin>>right_value;
 
         if(right_value != -1) {
-            temp->right = new b_node(right_value);
+            temp->right = new node(right_value);
             q.push(temp->right);
         }
     }
 }
 
 int main(){
-    b_node *root;
+    node *root;
     /* 1 2 3 -1 -1 4 -1 -1 5 6 -1 -1 -1 */ 
     root = buildTree(root);
     cout<<endl;

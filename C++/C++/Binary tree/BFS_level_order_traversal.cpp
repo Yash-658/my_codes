@@ -37,6 +37,7 @@ node* buildTree(node *root) {
     return root;
 }
 
+// isme ye NULL ko separator use krne ki jgah queue.size() wala method use kro, more efficient and intutive
 void levelOrderTraversal(node *root) {             // Breadth First Search (BFS) (prints tree level wise)
     queue<node*> q;
     q.push(root);
@@ -140,6 +141,19 @@ void buildFromLevelOrder(node* &root) {
     }
 }
 
+void leafNodes(node *root) {      // preorder dfs
+    if(!root) return;
+
+    // if it is leafNode, then print it
+    if(!root->left && !root->right) {
+        cout<<root->data<<" ";
+        return;
+    }
+
+    if(root->left) leafNodes(root->left);
+    if(root->right) leafNodes(root->right);
+}
+
 int main(){
     node *root;
     /* 1 2 3 -1 -1 4 -1 -1 5 6 -1 -1 -1 */ 
@@ -153,6 +167,8 @@ int main(){
     buildFromLevelOrder(root);
     cout<<endl;
     levelOrderTraversal(root);
+
+    leafNodes(root);
 
 
 return 0;

@@ -18,7 +18,7 @@
 //         }
 //     }
 
-//     // Add all leaf nodes (inorder style)
+//     // Add all leaf nodes (modified pre-order style)
 //     void addLeaves(Node* root, vector<int>& res) {
 //         if (!root) return;
 //         if (!root->left && !root->right) {

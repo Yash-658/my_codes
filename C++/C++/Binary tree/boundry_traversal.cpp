@@ -30,23 +30,20 @@
 //     }
 
 //     // Add right boundary in bottom-up using recursion, excluding leaves
-//     void addRightBoundary(Node* root, vector<int>& res) {
-           // base case~
-//         if(!root) return;
-        
-    //     // if right exists, go in right~
-    //     if(root->right) addRightBoundary(root->right, res);
-        
-    //     else {
-    //         // if left exists, go left
-    //         if(root->left) addRightBoundary(root->left, res);
-            
-    //         // if leaf node, return~
-    //         else return;
-    //     }
-        
-    //     res.push_back(root->data);
-    // }
+        // void addRightBoundary(Node* root, vector<int>& res) {
+        //     if (!root) return;
+
+        //     if (!root->left && !root->right) return;  // Skip leaf
+
+        //     if (root->right) {
+        //         addRightBoundary(root->right, res);
+        //     } else {
+        //         addRightBoundary(root->left, res);
+        //     }
+
+        //     res.push_back(root->data);  // Bottom-up
+        // }
+
 
 // public:
 //     vector<int> boundaryTraversal(Node* root) {

@@ -1,5 +1,6 @@
 
-
+    // there are two approaches, 1) by storing the path in two vectors from the root to p and from the root to q, and then in the path taking the last common node.
+    //                           2) the solution beneath is a recursive modified post order dfs, this is the most efficient solution as it solves in a single travsersal and doesn't take any extra memory
 
     // TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
     //     // base case

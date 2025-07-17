@@ -1,7 +1,7 @@
 // most optimal, TC- O(n), SC - O(n) ,, can also be done with pre-order dfs~
 
 // class Solution {
-//     // first element would be height and the second would be the sum till that node 
+//     // first element would be height and the second would be the sum of the longest path till that node 
 //     pair<int, int> post_dfs(Node *root) {
 //         // base case
 //         pair<int, int> ans;

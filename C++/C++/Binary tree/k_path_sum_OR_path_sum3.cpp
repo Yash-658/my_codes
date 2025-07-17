@@ -1,5 +1,5 @@
 // In love bbar code (lec 65), phele ek pura path nikal rhe, phir jo last node hai path mai, usko leke as a ending node jitne bhi path bn skte with sum k vo nikalke + krwa rhe, and doing this for every node~
-// love bbar and my brute force code is O(n^2), [it's not optimised, using prefix sum and hashmap we optimise it to O(n)]
+// love bbar and my brute force code is O(n^2), [it's not optimised, using prefix sum and hashmap we optimise it to O(n)] learn the optimised one!
 
 
 // My brute force code, TC- O(n^2)

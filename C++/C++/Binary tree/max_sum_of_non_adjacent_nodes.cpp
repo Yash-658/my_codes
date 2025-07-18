@@ -1,5 +1,8 @@
 // https://chatgpt.com/share/68790f9e-3840-8005-8fd4-8091d01b343e
 
+// When we exclude a node, we don’t assume we must include its children.
+// We choose, for each child, the better of including or excluding it using max().
+
 // class Solution {
 //     pair<int, int> solve(Node *root) {
 //         // base case

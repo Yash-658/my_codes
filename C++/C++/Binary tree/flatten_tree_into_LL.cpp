@@ -5,7 +5,7 @@
         //     while(curr != NULL) {                   // this will handle the edge case too, when root is NULL
         //         if(curr->left != NULL) {            // add this left subtree in right branch~
 
-        //             // find left nodes rightmost node~ (left predecessor)
+        //             // find left nodes rightmost node~ (inorder predecessor)
         //             TreeNode* temp = curr->left;
         //             while(temp->right != NULL) {          // this while loop has an amortized TC of O(N),
         //                 temp = temp->right;               // that means for the whole program this will run at max N times

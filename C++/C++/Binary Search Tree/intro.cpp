@@ -116,16 +116,16 @@ void Preorder(Node *root) {
     Preorder(root->right);
 }
 
-int main(){
-    // sample - 10 15 20 16 5 4 9 8 -1
-    Node *root = nullptr;
-    createBST(root);
-    // levelOrderTraversal(root);
-    Inorder(root);
-    cout<< endl;
-    Preorder(root);
-    cout<< endl;
-    Postorder(root);
-    cout<< endl;
-return 0;
-}
+// int main(){
+//     // sample - 10 15 20 16 5 4 9 8 -1
+//     Node *root = nullptr;
+//     createBST(root);
+//     // levelOrderTraversal(root);
+//     Inorder(root);
+//     cout<< endl;
+//     Preorder(root);
+//     cout<< endl;
+//     Postorder(root);
+//     cout<< endl;
+// return 0;
+// }

@@ -5,8 +5,9 @@
 #include <queue>
 using namespace std;
 
-// TC of Insertion, searching, and deletion in a BST- T(n)=O(height of BST)⇒O(logn) (best/avg), O(n) (worst) 
-// inorder traversal of BFS gives elements in sorted order
+// -> TC of Insertion, searching, and deletion in a BST- T(n)=O(height of BST)⇒O(logn) (best/avg), O(n) (worst) 
+// -> Inorder traversal of BST gives elements in sorted order
+// -> Min value in a BST is the left most value and Max value is the rightmost value
 
 class Node {
 public:

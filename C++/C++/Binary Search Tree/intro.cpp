@@ -9,6 +9,14 @@ using namespace std;
 // -> Inorder traversal of BST gives elements in sorted order
 // -> Min value in a BST is the left most value and Max value is the rightmost value
 
+/*
+Inorder Predecessor: The node that comes just before the given key in the inorder traversal (i.e., the maximum value smaller than the key).
+Inorder Successor: The node that comes just after the given key in the inorder traversal (i.e., the minimum value greater than the key).
+
+In BST, Predecessor = max in left subtree (rightmost node in left subtree).
+IN BST, Successor = min in right subtree (leftmost node in right subtree).
+*/
+
 class Node {
 public:
     int val;

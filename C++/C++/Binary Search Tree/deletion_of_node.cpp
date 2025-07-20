@@ -6,6 +6,24 @@
 #include<vector>
 using namespace std;
 
+//When deleting a node in a BST, we must maintain the BST property: For every node: all values in the left subtree are less, and all values in the right subtree are greater.
+
+// ✅ Why Use Inorder Successor or Predecessor when handling the "two children" case?
+// Because these are the only values in the tree that are guaranteed to:
+
+// Be close in value to the node being deleted.
+// Preserve the BST property when used to replace the node.
+
+// ✅ Inorder Successor:
+// The smallest node in the right subtree.
+
+// All values in right subtree are greater, so the smallest one is the closest greater value.
+// Replacing the deleted node with this keeps all left values < new value, and all right values > new value.
+
+// ✅ Inorder Predecessor:
+// The largest node in the left subtree.
+// It’s the closest smaller value, and preserves the BST property similarly.
+
 Node* deleteFromBST(Node* root, int val) {
     // base case
     if(!root) return NULL;
@@ -31,8 +49,6 @@ Node* deleteFromBST(Node* root, int val) {
         }
         
         // 2 child,, two options, we can either choose from the left or right subtree~
-        // if we want to choose from left sub-tree we will replace this node with the maxm value of left, 
-        // or if we want to delete from right subtree, we will take the minm value from right~
         if(root->left != NULL && root->right != NULL) {
             Node* temp = root->right;
             while(temp->left != NULL) {

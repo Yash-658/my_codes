@@ -38,7 +38,7 @@
 // 🌟 In practice, h1 and h2 are usually log n for balanced trees, so this is a space improvement over the previous approach.
 
 
-// this is second approach code, you did made this yourself!, khushi mna :)
+// this is second approach code, you did made this yourself!, khushi mna :) IT"S THE MOST OPTIMAL, one more way to do this was by flattening these into two sorted LLs and then merging it
 
 // void next_inorder(stack<TreeNode*> &s) {
 //     TreeNode* temp = s.top();

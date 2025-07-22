@@ -33,6 +33,7 @@
 // At any point, each stack holds at most O(h1) and O(h2) nodes, where h1 and h2 are tree heights
 
 // O(n + m) for result array
+// O(n + m) for result array
 // 🔹 Total: O(h1 + h2 + n + m)
 
 // 🌟 In practice, h1 and h2 are usually log n for balanced trees, so this is a space improvement over the previous approach.

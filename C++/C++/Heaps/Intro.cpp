@@ -4,6 +4,8 @@
 #include<vector>
 using namespace std;
 
+
+// insertion and deletion takes TC- O(logn)
 class maxHeap {
     public:
     int arr[100];

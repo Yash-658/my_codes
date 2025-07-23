@@ -94,22 +94,40 @@ class maxHeap {
         }
     }
 
-    void heapFromArray(int a[], int n) {
+// buildHeapFromArray() is O(n) because:
+
+// Deeper nodes (more in number) require less work
+// Shallower nodes (fewer) require more work
+// The total work balances out to linear time
+
+    void heapFromArray(int a[], int n) {     // O(n) mai ye array se heap bna deta hai~  (how? heapify down agr logn time leta hai and ye approx n elements ke liye chlega toh O(nlogn) hona tha na?)
         size = n;
         for (int i = 1; i <= size; i++)
         {
             arr[i] = a[i];
         }
-        
+
         for(int i = n/2; i >= 1; i--) 
         {
             heapifyDown(arr, size, i);
         }
     }
+
+    void heapSort() {               // O(nlogn)
+        int n = size;
+        while(n > 1) {
+            // step: 1, swap top element with the last element~
+            swap(arr[1], arr[n]);
+            n--;
+
+            // step: 2, put root element at its right place~
+            heapifyDown(arr, n, 1);
+        }
+    }
 };
 
 
-void heapifyDown(int arr[], int size, int i) {             // logn mai sahi jgah pe phocha deti hai~
+void heapifyDown(int arr[], int size, int i) {             // o(logn) mai sahi jgah pe phocha deti hai~
     int left = 2 * i;
     int right = 2 * i + 1;
     int largest = i;
@@ -142,17 +160,20 @@ int main(){
     int arr[7] = {-1, 55, 85, 40, 60, 30, 50};
     int n = 6;
 
-    cout<<"Normal array: ";
-    for (int i = 1; i <= n; i++)
-    {
-        cout<<arr[i]<<" ";
-    }cout<<endl;
+    // cout<<"Normal array: ";
+    // for (int i = 1; i <= n; i++)
+    // {
+    //     cout<<arr[i]<<" ";
+    // }cout<<endl;
     
     maxHeap h;
     h.heapFromArray(arr, n);
-
     cout<<"After converting into maxHeap: ";
     h.print();
+    cout<<endl;
 
+    cout<<"After sorting: ";
+    h.heapSort();
+    h.print();
     return 0;
 }

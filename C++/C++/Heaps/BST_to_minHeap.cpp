@@ -1,0 +1,2 @@
+// https://www.geeksforgeeks.org/dsa/convert-bst-min-heap/ 
+// khud se krne ki koshish kr,                                                                                                              saaley phirse nhi bn rha kya?? uski approach dekh niche jaake bhochaka kha jayega XD

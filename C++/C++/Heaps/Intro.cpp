@@ -12,6 +12,9 @@ void heapifyDown(int[], int, int);
 // MAXHEAP- every node has children that have values smaller or equal to than their parents
 // MINHEAP- every node has children that have values greater or equal to than their parents
 
+// In 1-based indexing, leaf node in the heap array exists from (n/2 + 1)th -> nth index
+// In 1-based indexing, leaf node in the heap array exists from (n/2)th -> nth index
+
 // if an element has index 'i'-
 // it's left child pos = 2*i
 // it's right child pos = (2*i) + 1

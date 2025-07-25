@@ -1,3 +1,5 @@
+
+// MOST OPTIMAL APPROACH-           (iski ek aur merge sort jesi approach hai with same TC, so usko bhi dekh lena ek baar)
 // This approach uses a min-heap to always extract the smallest current node among all k linked lists.
 // We start by pushing the first node of each list into the heap, and as we extract the smallest node, we push its next node (if any).
 // 🔁 This ensures sorted merging in one pass — Time: O(n log k), Space: O(k).

@@ -1,3 +1,7 @@
+// Use Heaps when you need to efficiently maintain order under continuous insertions, 
+// especially for "Top-K", "Min/Max", or "Median"-type problems.
+
+
 #include<iostream>
 #include<string>
 #include<algorithm>

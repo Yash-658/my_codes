@@ -44,66 +44,74 @@
 // }
 
 
-/* THIS IS THE OPTIMISED VERSION USING TWO HEAPS, see lecture 77: for the real code, this one was chatgpt
-#include <bits/stdc++.h>
-using namespace std;
+/* THIS IS THE OPTIMISED VERSION USING TWO HEAPS O(NlogN)
+#include<queue>
 
-class MedianFinder {
-private:
-    priority_queue<int> maxHeap; // lower half
-    priority_queue<int, vector<int>, greater<int>> minHeap; // upper half
+int signum(int a, int b) {
+	if(a == b) return 0;
+	if(a > b) return 1;
+	else return -1;
+}
 
-public:
-    void addNum(int num) {
-        // Case 1: Heaps are same size → insert into maxHeap
-        if (maxHeap.size() == minHeap.size()) {
-            if (!minHeap.empty() && num > minHeap.top()) {
-                minHeap.push(num);
-                num = minHeap.top();
-                minHeap.pop();
-            }
-            maxHeap.push(num);
-        }
-        // Case 2: maxHeap has more → insert into minHeap
-        else if (maxHeap.size() > minHeap.size()) {
-            if (num < maxHeap.top()) {
-                maxHeap.push(num);
-                num = maxHeap.top();
-                maxHeap.pop();
-            }
-            minHeap.push(num);
-        }
-        // Case 3: minHeap has more → insert into maxHeap
-        else { // minHeap.size() > maxHeap.size()
-            if (num > minHeap.top()) {
-                minHeap.push(num);
-                num = minHeap.top();
-                minHeap.pop();
-            }
-            maxHeap.push(num);
-        }
-    }
+void getMedian(int element, priority_queue<int> &maxHeap, 
+priority_queue<int, vector<int>, greater<int>> &minHeap, int &median) {
 
-    int findMedian() {
-        if (maxHeap.size() == minHeap.size()) {
-            return (maxHeap.top() + minHeap.top()) / 2;
-        } else if (maxHeap.size() > minHeap.size()) {
-            return maxHeap.top();
-        } else {
-            return minHeap.top();
-        }
-    }
-};
+	switch(signum(maxHeap.size(), minHeap.size())) {
+		case 0: 
+		if(element > median) {
+			minHeap.push(element);
+			median = minHeap.top();
+		}
 
-// Example usage
-int main() {
-    MedianFinder mf;
-    vector<int> stream = {5, 15, 1, 3, 2, 8};
-    for (int num : stream) {
-        mf.addNum(num);
-        cout << "Inserted " << num << " → Median = " << mf.findMedian() << endl;
-    }
-    return 0;
+		else {
+			maxHeap.push(element);
+			median = maxHeap.top();
+		}
+
+		break;
+
+		case 1:
+		if(element > median) {
+			minHeap.push(element);
+			median = (minHeap.top() + maxHeap.top())/2;
+		}
+
+		else {
+			minHeap.push(maxHeap.top());
+			maxHeap.pop();
+			maxHeap.push(element);
+			median = (minHeap.top() + maxHeap.top())/2;
+		}
+		break;
+
+		case -1:
+		if(element > median) {
+			maxHeap.push(minHeap.top());
+			minHeap.pop();
+			minHeap.push(element);
+			median = (minHeap.top() + maxHeap.top())/2;
+		}
+
+		else {
+			maxHeap.push(element);
+			median = (minHeap.top() + maxHeap.top())/2;
+		}
+		break;
+	} 
+}
+
+vector<int> findMedian(vector<int> &arr, int n){
+	vector<int> res;
+	priority_queue<int> maxHeap;
+	priority_queue<int, vector<int>, greater<int>> minHeap;
+	int median = 0;
+
+	for(int i = 0; i < n; i++) {
+		getMedian(arr[i], maxHeap, minHeap, median);
+		res.push_back(median);
+	}
+
+	return res;
 }
 
 */

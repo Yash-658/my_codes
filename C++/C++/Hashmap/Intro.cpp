@@ -9,6 +9,7 @@
 
 // Revise Hashing -> hash fxns -> hash code, compression fxn
 //                -> collision handling techniques (https://chatgpt.com/share/68861307-9edc-8005-9239-71c09d583b41)
+//                -> load factor  (usually set to atleast 0.7)
 
 
 #include<iostream>

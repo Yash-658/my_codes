@@ -5,7 +5,6 @@
 using namespace std;
 
 // ALSO KNOWN AS PREFIX TREE
-
 // INSERTION, SEARCHING, DELETION   TC: O(L)  L: length of word~
 
 class TrieNode {

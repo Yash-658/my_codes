@@ -2,6 +2,30 @@
 // THIS IS THE TRIE IMPLEMENTATION OF THIS QUESTION, 
 // there's one more approach in which we compare each char of the first string one by one with all other strings, it uses constant space and is better if we only want the LCP once~
 
+/*   // char by char approach~
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
+        if (strs.empty()) return "";
+
+        // Check each character one by one from the first word
+        for (int i = 0; i < strs[0].size(); i++) {
+            char ch = strs[0][i];
+
+            // Compare that character with all other strings
+            for (int j = 1; j < strs.size(); j++) {
+                // Stop if out of bounds or mismatch
+                if (i >= strs[j].size() || strs[j][i] != ch)
+                    return strs[0].substr(0, i);
+            }
+        }
+
+        // All characters matched — return full first word
+        return strs[0];
+    }
+};
+*/
+
 /*
 ✅ Time Complexity Comparison
 Approach	     Time Complexity	        Space Complexity

@@ -4,6 +4,8 @@
 #include<vector>
 using namespace std;
 
+// as we are already generating paths in lexicographical order, "D L R U", we don't need to sort in the last
+
     bool isSafe(const vector<vector<int>>& maze, int &n, vector<vector<int>> &visited, int new_x, int new_y) {
         if(new_x >= 0 && new_x < n && new_y >= 0 && new_y < n && maze[new_x][new_y] == 1 && visited[new_x][new_y] == 0) {
             return true;
@@ -81,6 +83,5 @@ vector < string > searchMaze(vector < vector < int >> & arr, int n) {
         int source_x = 0, source_y = 0;
         
         solve(arr, n, source_x, source_y, visited, path, ans);
-        sort(ans.begin(),ans.end());
         return ans;
-}
+}   

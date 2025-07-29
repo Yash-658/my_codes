@@ -56,4 +56,22 @@ function square(number) {
 let a = square(2);
 // console.log(a);
 
-console.log(square(2));
+// console.log(square(2));
+
+
+function evenOrOdd(number) {
+    if(number&1) {
+        console.log(number + ' is odd');
+    }
+    
+    else {
+        console.log(number + ' is even');
+    }
+}
+// evenOrOdd(6);
+
+function maxOfThree(num1, num2, num3) {
+    console.log(Math.max(num1, num2, num3));
+}
+
+maxOfThree(15, 20, 99);

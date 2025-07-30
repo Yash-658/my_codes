@@ -3,11 +3,12 @@
 #include<unordered_map>
 using namespace std;
 
+template <typename T>
 class graph {
     public:
-    unordered_map<int, list<int>> adj;
+    unordered_map<T, list<T>> adj;
 
-    void addEge(int u, int v, bool directed) {
+    void addEge(T u, T v, bool directed) {
         // add u -> v
         adj[u].push_back(v);
 
@@ -27,7 +28,7 @@ class graph {
 };
 
 int main(){
-    graph gh;
+    graph<int> gh;
     gh.addEge(0, 1, 0);
     gh.addEge(0, 4, 0);
     gh.addEge(4, 3, 0);

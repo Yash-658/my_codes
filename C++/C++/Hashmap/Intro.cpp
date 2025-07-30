@@ -1,13 +1,14 @@
 // Ordered map uses a red-black tree (type of a self balancing BST) to give O(logn) TCs for insertion, deletion and searching~
 // Unordered map uses hash-table and have amortized TC of O(1) and a worst case O(n) in insertion, deletion, searching etc
 
-// when we try to access a key which doesn't exist in the map with [], it creates the respective key with default value "0"~
+// when we try to access a key which doesn't exist in the map with [], it creates the respective key with the respective default value of that value type~
 // but when we try to access the unexisting key with ".at()", it gives an exception~
 
 // count() fxn is used to check if a given key exists or not, returns 1 if present and 0 if absent
 // erase() to delete a pair by its "key"
 
-// Revise Hashing -> hash fxns -> hash code, compression fxn
+// Revise Hashing (https://chatgpt.com/share/6889a721-7520-8005-b0c6-588df908dbda)
+//                -> hash fxns -> hash code, compression fxn
 //                -> collision handling techniques (https://chatgpt.com/share/68861307-9edc-8005-9239-71c09d583b41)
 //                -> load factor  (usually set to atleast 0.7)
 

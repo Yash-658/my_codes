@@ -41,6 +41,35 @@ int main(){
     return 0;
 }
 
-// BFS is different for different types of graphs, for example, for connected undirected and directed graphs
+// BFS is different for different types of graphs, for example, for connected undirected and directed graphs 
 // but for disconnected graphs, we will have to just add the extra funtionality to travel all the nodes atleast once
 
+// This one works for connected directed and undirected graphs and Node 0 exists and is reachable to all
+// 🔁 To make it general-purpose, loop through all nodes and run BFS from any unvisited node (i.e., handle disconnected components).
+
+// #include<set>
+// #include<map>
+
+// vector<int> bfsTraversal(int n, vector<vector<int>> &adj){
+//     queue<int> q;
+//     unordered_map<int,bool> visited;
+//     vector<int> res;
+
+//     q.push(0);
+//     visited[0] = true;
+
+//     while(!q.empty()) {
+//         int temp = q.front();
+//         q.pop();
+
+//         res.push_back(temp);
+//         for(const int &i: adj[temp]) {
+//             if(!visited[i]) {
+//                 q.push(i);
+//                 visited[i] = true;
+//             }
+//         }
+//     }
+
+//     return res;
+// }

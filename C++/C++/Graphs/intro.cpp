@@ -73,3 +73,49 @@ int main(){
 
 //     return res;
 // }
+
+
+// DFS for connected as well as disconnected directed(just a slight tweak in creating the adj list) and undirected graphs
+
+// void DFS(int i, vector<vector<int>> &adj, unordered_map<int, bool> &visited,
+//         vector<int> &temp) 
+// {
+//     // mark visited~
+//     visited[i] = true;
+
+//     // push i in temp~
+//     temp.push_back(i);
+
+//     // iterate to all the elements in the adjaceny list of i one-by-one
+//     for(int j = 0; j < adj[i].size(); j++) {
+//         if(!visited[adj[i][j]]) {
+//             DFS(adj[i][j], adj, visited, temp);
+//         }
+//     }
+// }
+
+// void createAdj(vector<vector<int>> &adj, vector<vector<int>> &edges) {
+//     for(const auto &pair: edges) {
+//         adj[pair[0]].push_back(pair[1]);
+//         adj[pair[1]].push_back(pair[0]);
+//     }
+// }
+
+// vector<vector<int>> depthFirstSearch(int V, int E, vector<vector<int>> &edges)
+// {
+//     vector<vector<int>> adj(V);
+//     createAdj(adj, edges);
+//     vector<vector<int>> res;
+//     unordered_map<int, bool> visited;
+
+//     //ensures even disconnected components are traversed
+//     for(int i = 0; i < V; i++) {
+//         if(!visited[i]) {
+//             vector<int> temp;
+//             DFS(i, adj, visited, temp);
+//             res.push_back(temp);
+//         }
+//     }
+
+//     return res;
+// }

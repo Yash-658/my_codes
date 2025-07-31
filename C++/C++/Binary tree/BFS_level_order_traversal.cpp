@@ -37,24 +37,18 @@ node* buildTree(node *root) {
     return root;
 }
 
-// isme ye NULL ko separator use krne ki jgah queue.size() wala method use kro, more efficient and intutive
+// using queue.size() wala method cuz more efficient and intutive, can also use NULL seperator logic
 void levelOrderTraversal(node *root) {             // Breadth First Search (BFS) (prints tree level wise)
     queue<node*> q;
     q.push(root);
-    q.push(NULL);
 
     while(!q.empty()) {
-        node *temp = q.front();
-        q.pop();
+        int q_size = q.size();
+        for(int i = 0; i < q_size; i++) {
+            node* temp = q.front();
+            q.pop();
 
-        if(temp == NULL) {                           // this NULL logic is just for the separator, to print different levels at different lines~
-            cout<<endl;
-            if(!q.empty()) q.push(NULL);
-        }
-
-        else {
             cout<<temp->data<<" ";
-
             if(temp->left) {
                 q.push(temp->left);
             }
@@ -63,6 +57,7 @@ void levelOrderTraversal(node *root) {             // Breadth First Search (BFS)
                 q.push(temp->right);
             }
         }
+        cout<<endl;
     }
 }
 

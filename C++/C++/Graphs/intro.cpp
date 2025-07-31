@@ -25,6 +25,7 @@ class graph {
             }cout<<endl;
         }
     }
+
 };
 
 int main(){
@@ -37,6 +38,9 @@ int main(){
     gh.addEge(3, 2, 0);
 
     gh.printAdj();
-return 0;
+    return 0;
 }
+
+// BFS is different for different types of graphs, for example, for connected undirected and directed graphs
+// but for disconnected graphs, we will have to just add the extra funtionality to travel all the nodes atleast once
 

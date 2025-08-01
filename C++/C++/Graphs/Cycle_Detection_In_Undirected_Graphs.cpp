@@ -8,7 +8,7 @@ using namespace std;
 
 // https://www.naukri.com/code360/problems/cycle-detection-in-undirected-graph_1062670?topList=love-babbar-dsa-sheet-problems&leftPanelTab=0&utm_source=youtube&utm_medium=affiliate&utm_campaign=Lovebabbar&leftPanelTabValue=PROBLEM
 
-// THIS IS CLASSIC BFS APPROACH
+// THIS IS CLASSIC BFS APPROACH FOR CYCLE DETECTING
 
 // void createAdj(vector<vector<int>> &adj, vector<vector<int>> &edges) {
 //     for(const auto &pair: edges) {

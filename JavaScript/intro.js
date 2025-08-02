@@ -74,4 +74,8 @@ function maxOfThree(num1, num2, num3) {
     console.log(Math.max(num1, num2, num3));
 }
 
-maxOfThree(15, 20, 99);
+// maxOfThree(15, 20, 99);
+
+for(let i = 0; i <= 10; i++) {
+    console.log(i);
+}

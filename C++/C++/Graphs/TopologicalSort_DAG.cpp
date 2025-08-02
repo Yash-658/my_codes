@@ -70,7 +70,17 @@
 //     return ans;
 // }  
 
-// BTW, add this in the kahn's algo to detect if there's a cycle in the graph~
-// if (ans.size() < v) {
-//     // Cycle detected
-// }
+/*
+BTW, add this in the kahn's algo to detect if there's a cycle in the graph~
+if (ans.size() < v) {
+     // Cycle detected
+}
+
+🧠 What happens in a cyclic graph?
+In a cycle, every node has at least one incoming edge.
+That means: no node will ever reach inDegree = 0.
+So: those nodes never enter the queue, never get processed.
+Hence, fewer than v nodes will ever be pushed into ans.
+✅ Therefore, ans.size() < v is a guaranteed sign of a cycle.
+
+*/

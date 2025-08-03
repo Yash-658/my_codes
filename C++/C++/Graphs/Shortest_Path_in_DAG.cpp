@@ -1,11 +1,11 @@
 // SHORTEST PATH IN WEIGHTED DAG USING DFS, TOPOLOGICAL SORT
 
-
 // class Solution {
 //     void dfs(int i, const vector<vector<pair<int,int>>> &adj, vector<bool> &visited, stack<int> &s) {
+//         visited[i] = true;
+        
 //         for(const auto &list: adj[i]) {
 //             if(!visited[list.first]) {
-//                 visited[list.first] = true;
 //                 dfs(list.first, adj, visited, s);
 //             }
 //         }
@@ -26,7 +26,6 @@
 //         // now prepare the topological sort~
 //         for(int i = 0; i < V; i++) {
 //             if(!visited[i]) {
-//                 visited[i] = true;
 //                 dfs(i, adj, visited, s);
 //             }
 //         }

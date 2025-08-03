@@ -15,7 +15,7 @@
 //   // for each non-visited outgoing edge from this node, run the isCycle fxn~
 //   for(int j = 0; j < adj[i].size(); j++) {
 //     int node = adj[i][j];
-//     if(visited[node] && recStack[node]) return true;
+//     if(recStack[node]) return true;
 //     if(!visited[node]) {
 //       if(isCycle(node, adj, visited, recStack)) return true;
 //     }

@@ -8,7 +8,7 @@ class graph {
     public:
     unordered_map<T, list<T>> adj;
 
-    void addEge(T u, T v, bool directed) {
+    void addEdge(T u, T v, bool directed) {
         // add u -> v
         adj[u].push_back(v);
 
@@ -30,12 +30,12 @@ class graph {
 
 int main(){
     graph<int> gh;
-    gh.addEge(0, 1, 0);
-    gh.addEge(0, 4, 0);
-    gh.addEge(4, 3, 0);
-    gh.addEge(3, 1, 0);
-    gh.addEge(1, 2, 0);
-    gh.addEge(3, 2, 0);
+    gh.addEdge(0, 1, 0);
+    gh.addEdge(0, 4, 0);
+    gh.addEdge(4, 3, 0);
+    gh.addEdge(3, 1, 0);
+    gh.addEdge(1, 2, 0);
+    gh.addEdge(3, 2, 0);
 
     gh.printAdj();
     return 0;

@@ -2,6 +2,9 @@
 // Spanning Tree: It's a tree which: 1) uses exactly "n-1" edges (if you have "n" nodes)
 //                                   2) each node is reachable by every other node
 
+// OR
+// Spanning Tree is a subgraph of a graph with same set of vertices but with a subset of edges with size |V|-1
+
 
 // YOU CAN MODIFY IT A LITTLE IF YOU WANT MST~  (This gives the sum of all weights of the resulting MST)
 

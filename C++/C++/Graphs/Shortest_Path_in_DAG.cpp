@@ -1,5 +1,9 @@
 // SHORTEST PATH IN WEIGHTED DAG USING DFS, TOPOLOGICAL SORT
 
+// Why this works
+// Topological sort ensures all shortest ways to a node are processed before the node itself.
+// Once we process a node, we never have to revisit it — no cycles to create new paths.
+
 // class Solution {
 //     void dfs(int i, const vector<vector<pair<int,int>>> &adj, vector<bool> &visited, stack<int> &s) {
 //         visited[i] = true;
@@ -18,6 +22,7 @@
 //         vector<vector<pair<int,int>>> adj(V);
 //         for(const auto &edge: edges) {
 //             adj[edge[0]].push_back({edge[1], edge[2]});
+
 //         }
         
 //         vector<bool> visited(V);

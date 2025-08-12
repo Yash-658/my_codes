@@ -9,6 +9,7 @@ using namespace std;
 // https://www.naukri.com/code360/problems/cycle-detection-in-undirected-graph_1062670?topList=love-babbar-dsa-sheet-problems&leftPanelTab=0&utm_source=youtube&utm_medium=affiliate&utm_campaign=Lovebabbar&leftPanelTabValue=PROBLEM
 
 // THIS IS CLASSIC BFS APPROACH FOR CYCLE DETECTING
+// if a node is already visited and it's not the parent node of the current node, then there's a cycle
 
 // void createAdj(vector<vector<int>> &adj, vector<vector<int>> &edges) {
 //     for(const auto &pair: edges) {

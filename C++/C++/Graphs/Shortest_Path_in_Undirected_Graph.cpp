@@ -1,4 +1,4 @@
-// This is using BFS (FOR UNDIRECTED WEIGHTES GRAPH)
+// This is using BFS (FOR UNDIRECTED UNWEIGHTED GRAPH)
 // vector<int> shortestPath( vector<pair<int,int>> edges , int n , int m, int s , int t){
 	
 // 	vector<vector<int>> adj(n+1);

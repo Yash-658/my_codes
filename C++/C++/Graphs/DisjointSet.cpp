@@ -1,6 +1,6 @@
 // Disjoint Set are used in dynamic graphs (used to tell if two nodes are in the same component in constant time)
+// https://youtu.be/aBxjDBC4M1U?si=SDwxUc3-GtQRTqog
 
-// UNION BY RANK
 #include<iostream>
 #include<string>
 #include<algorithm>
@@ -8,10 +8,11 @@
 using namespace std;
 
 class DisjointSet {
-    vector<int> rank, parent;
+    vector<int> rank, size, parent;
 public:
     DisjointSet(int n) {
         rank.resize(n+1, 0);
+        size.resize(n+1, 1);
         parent.resize(n+1);
 
         for(int i = 0; i <= n; i++) {
@@ -26,6 +27,7 @@ public:
         return parent[node] = findUPar(parent[node]);     // path compression~
     }
 
+    // UNION BY RANK
     void unionByRank(int u, int v) {
         int Ult_u = findUPar(u);                         // find ultimate parent of both u and v
         int Ult_v = findUPar(v);
@@ -47,6 +49,31 @@ public:
 
         else {
             parent[Ult_u] = Ult_v;
+        }
+    }
+
+    // UNION BY SIZE
+    void unionBySize(int u, int v) {
+        int Ult_u = findUPar(u);                         // find ultimate parent of both u and v
+        int Ult_v = findUPar(v);
+
+        if(Ult_u == Ult_v) return;                       // if they belong to the same component, we don't have to do anything
+
+        if(size[Ult_u] > size[Ult_v]) {                                
+            // add smaller component to bigger~
+            parent[Ult_v] = Ult_u;
+            size[Ult_u] += size[Ult_v];
+        }
+
+        else if(size[Ult_u] < size[Ult_v]) {
+            // add smaller component to bigger~
+            parent[Ult_u] = Ult_v;
+            size[Ult_v] += size[Ult_u];
+        }
+
+        else {
+            parent[Ult_u] = Ult_v;
+            size[Ult_v] += size[Ult_u];
         }
     }
 };

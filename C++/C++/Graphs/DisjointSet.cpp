@@ -1,6 +1,12 @@
 // Disjoint Set are used in dynamic graphs (used to tell if two nodes are in the same component in constant time)
 // https://youtu.be/aBxjDBC4M1U?si=SDwxUc3-GtQRTqog
 
+/*
+Path Compression: Makes findUPar() very fast (almost O(1) amortized).
+Union by Size/Rank: Keeps tree shallow → speeds up further operations.
+DSU is great for dynamic connectivity problems (like Kruskal's MST).
+*/
+
 #include<iostream>
 #include<string>
 #include<algorithm>

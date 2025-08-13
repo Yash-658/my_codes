@@ -6,6 +6,8 @@
 // Spanning Tree is a subgraph of a graph with same set of vertices but with a subset of edges with size |V|-1
 
 
+
+// INTUTION: Grow the tree from one node, always add the smallest edge that expands the tree without forming a cycle. (we check the "not forming a cycle" part by making the visited[])
 // YOU CAN MODIFY IT A LITTLE IF YOU WANT MST~  (This gives the sum of all weights of the resulting MST), prims is a greedy algo
 
 // #include<queue>

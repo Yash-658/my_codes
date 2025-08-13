@@ -5,6 +5,10 @@
 Path Compression: Makes findUPar() very fast (almost O(1) amortized).
 Union by Size/Rank: Keeps tree shallow → speeds up further operations.
 DSU is great for dynamic connectivity problems (like Kruskal's MST).
+
+“With union by rank and path compression, both find and union run in amortized O(α(n)) time, where 𝛼
+is the inverse Ackermann function. That’s the tight bound proved by Tarjan in 1975, and since
+α(n)≤4 for all practical n, it’s effectively constant in real-world usage.”
 */
 
 #include<iostream>

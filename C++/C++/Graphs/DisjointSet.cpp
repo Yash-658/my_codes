@@ -65,12 +65,6 @@ public:
             size[Ult_u] += size[Ult_v];
         }
 
-        else if(size[Ult_u] < size[Ult_v]) {
-            // add smaller component to bigger~
-            parent[Ult_u] = Ult_v;
-            size[Ult_v] += size[Ult_u];
-        }
-
         else {
             parent[Ult_u] = Ult_v;
             size[Ult_v] += size[Ult_u];
@@ -81,11 +75,11 @@ public:
 int main()
 {
     DisjointSet Ds(7);
-    Ds.unionByRank(1, 2);
-    Ds.unionByRank(2, 3);
-    Ds.unionByRank(4, 5);
-    Ds.unionByRank(6, 7);
-    Ds.unionByRank(5, 6);
+    Ds.unionBySize(1, 2);
+    Ds.unionBySize(2, 3);
+    Ds.unionBySize(4, 5);
+    Ds.unionBySize(6, 7);
+    Ds.unionBySize(5, 6);
 
     if(Ds.findUPar(3) == Ds.findUPar(7)) cout<<"Same Component of 3 and 7"<<endl;           // if Ult parent of both nodes are same, they are in the same Component
     else cout<<"Different Component of 3 and 7"<<endl;

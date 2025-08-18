@@ -1,5 +1,6 @@
 // https://www.naukri.com/code360/problems/topological-sort_982938?topList=love-babbar-dsa-sheet-problems&leftPanelTab=0&utm_source=youtube&utm_medium=affiliate&utm_campaign=Lovebabbar
 // Topological sort can only be applied to DAG(Directed Acyclic Graph)
+// Topological sort is a linear ordering of vertices in a Directed Acyclic Graph (DAG) such that every directed edge u → v, u comes before v in the ordering
 
 // THIS IS BY DFS~
 

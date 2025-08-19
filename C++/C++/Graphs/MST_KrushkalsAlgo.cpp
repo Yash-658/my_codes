@@ -63,17 +63,11 @@
 //   public:
 //     int kruskalsMST(int V, vector<vector<int>> &edges) {
 //         int sum = 0;
-//         priority_queue<vector<int>, vector<vector<int>>, Greater> minHeap;
+//         sort(edges.begin(), edges.end(), Greater());
 //         DisjointSet Ds(V);
         
-//         for(const auto &edge: edges) {
-//             minHeap.push(edge);
-//         }
         
-//         while(!minHeap.empty()) {
-//             vector<int> temp = minHeap.top();
-//             minHeap.pop();
-            
+//         for(const auto &temp: edges) {
 //             if(Ds.findUPar(temp[0]) == Ds.findUPar(temp[1])) continue;
 //             Ds.unionByRank(temp[0], temp[1]);
 //             sum += temp[2];

@@ -1,5 +1,5 @@
 // Total Time Complexity: O(ElogE)
-
+// https://www.geeksforgeeks.org/problems/minimum-spanning-tree-kruskals-algorithm/1
 // ✅ Best when:
 
 // The graph is sparse (E closer to V).

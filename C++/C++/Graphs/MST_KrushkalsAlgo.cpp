@@ -4,6 +4,7 @@
 
 // The graph is sparse (E closer to V).
 // Edges are easier to sort/store.
+<<<<<<< HEAD
 // You want an edge-based algorithm.
 
 
@@ -83,3 +84,6 @@
 //     }
 // };
 
+=======
+// You want an edge-based algorithm.
+>>>>>>> c413e0aa50de2ba19969ff64a6bfc24e3a93a3a9

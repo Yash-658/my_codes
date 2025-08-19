@@ -52,3 +52,7 @@
 //         return sum;
 //     }
 // };
+
+// Prim’s works because at every step it picks the cheapest edge crossing the cut between the visited and unvisited vertices. 
+// By the MST cut property, this edge is always safe to include, 
+// so growing the tree greedily one edge at a time still guarantees the globally minimum spanning tree.

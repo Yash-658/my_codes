@@ -83,3 +83,6 @@
 //     }
 // };
 
+// Kruskal’s works because it picks the globally smallest edge each time, 
+// and by the cut property, any such edge that doesn’t form a cycle is always safe to add to the MST.
+

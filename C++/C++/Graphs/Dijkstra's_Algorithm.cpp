@@ -10,9 +10,7 @@
 //         adj[edge[1]].push_back({edge[0], edge[2]});
 //     }
 
-//     vector<int> distance(vertices, INT_MAX);       // as unidrected graph hai aisa toh hoga nhi ki koi vertice unreachable hogi, toh -1 se htake INT_MAX se hi initialise kr rhe sbhko~
-
-//     // source node ke distance ko 0 set kro~
+//     vector<int> distance(vertices, INT_MAX);      
 //     distance[0] = 0;
 //     set<pair<int, int>> distanceNode;
 //     distanceNode.insert({0, 0});

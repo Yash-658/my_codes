@@ -3,7 +3,6 @@
 // Equivalently, it’s an edge that does not lie on any cycle (because if it were on a cycle, removing it would still leave another path between its endpoints).
 
 // Tarjan's Algo:
-
 // https://youtu.be/qrAub5z8FeA?si=IzwDmpXf2ApoA3t2
 // https://leetcode.com/problems/critical-connections-in-a-network/
 

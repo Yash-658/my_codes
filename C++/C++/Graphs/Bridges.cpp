@@ -6,6 +6,8 @@
 // https://youtu.be/qrAub5z8FeA?si=IzwDmpXf2ApoA3t2
 // https://leetcode.com/problems/critical-connections-in-a-network/
 
+// tin[] = DFS time insertion, low[] = min time insertion of all adjacent nodes apart from parent
+
 // class Solution {
 // private:
 // int timer = 1;

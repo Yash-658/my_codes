@@ -32,7 +32,7 @@
 //             }
 //         }
         
-//         if(child > 1 && parent == -1) mark[node] = 1;
+//         if(child > 1 && parent == -1) mark[node] = 1;        // edge case: for checking the root node
 //     }
     
 //   public:

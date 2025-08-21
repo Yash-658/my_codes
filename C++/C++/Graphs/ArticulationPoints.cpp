@@ -1,7 +1,7 @@
 // Articulation Points: Nodes on whose removal, the graph breaks into multiple components
 
 // using tarjan's algo that we used to find bridges in a graph with a slight twist~
-// tin[] = DFS time insertion, low[] = min time insertion of all adjacent nodes apart from parent asnd visited nodes
+// tin[] = DFS time insertion, low[] = min time insertion of all adjacent nodes apart from parent and visited nodes
 
 // https://www.youtube.com/watch?v=j1QDfU21iZk
 // https://www.geeksforgeeks.org/problems/articulation-point-1/1
@@ -20,7 +20,7 @@
 //         for(const auto it: adj[node]) {
 //             if(it == parent) continue;
             
-//             if(visited[it]) low[node] = min(low[node], tin[it]);
+//             if(visited[it]) low[node] = min(low[node], tin[it]);             // think why we are taking tin[it] and not low[it] like we did for bridges?
 //             else {
 //                 DFS(it, node, visited, mark, tin, low, adj);
 //                 low[node] = min(low[node], low[it]);

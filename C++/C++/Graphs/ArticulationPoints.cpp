@@ -16,7 +16,7 @@
 //         tin[node] = low[node] = timer;
 //         timer++;
         
-//         int child = 0;
+//         int child = 0;                                                       // this is for the special check for root node
 //         for(const auto it: adj[node]) {
 //             if(it == parent) continue;
             

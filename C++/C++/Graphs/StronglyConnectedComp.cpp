@@ -33,7 +33,7 @@
 //     int kosaraju(vector<vector<int>> &adj) {
 //         int ans = 0;
         
-//         stack<int> s;           // will store sorted edges according to finishing time~
+//         stack<int> s;           // will store sorted nodes according to finishing time~
 //         vector<bool> visited(adj.size(), false);
 //         for(int i = 0; i < adj.size(); i++) {
 //             if(!visited[i]) dfs(i, adj, visited, s);
@@ -67,3 +67,6 @@
 //         return ans;
 //     }
 // };
+
+// a little explanation as to why we sort nodes on finishing time first
+// https://chatgpt.com/s/t_68a80744be908191ac637410bb41acd9

@@ -36,15 +36,12 @@
 //                     string shape;
 //                     new_island(i, j, m, n, shape, grid);
                     
-//                     // now check if this is an island of new shape~
-//                     if(shapes.find(shape) == shapes.end()) {
-//                         islands++;
-//                         shapes.insert(shape);
-//                     }
+//                     // now as this is a set, if this shape already exists in it, it won't add automatically
+//                     shapes.insert(shape);
 //                 }
 //             }
 //         }
 
-//         return islands;
+//         return shapes.size();
 //     }
 // };

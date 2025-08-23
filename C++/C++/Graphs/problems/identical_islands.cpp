@@ -2,6 +2,8 @@
 
 // The trick was to know how to store the shape of the island~
 
+// if you wanna take it to the highest level, solve for distinct islands up to isomorphism where rotations and reflections count as the same shape.
+
 // class Solution {
 //         void new_island(int x, int y, int m, int n, string &shape, vector<vector<int>>& grid) {
 //         // mark it as visited by turning connected 1s to 0

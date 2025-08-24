@@ -1,4 +1,5 @@
 // https://www.youtube.com/watch?v=uRbJ1OF9aYM&t=21s
+// https://leetcode.com/problems/find-eventual-safe-states/description/
 
 // Your Approach, same TC and SC with the standard approach but uses some extra arrays~
 

@@ -51,4 +51,4 @@
 
 // Standard Approach of DFS, Instead of 3 separate arrays (visited, recStack, safe), we compress everything into one array color[], it is not interviewer friendly~
 
-// We can also do this using Kahn's Algo~
+// We can also do this using Kahn's Algo~ check last submission on LC for that method

@@ -1,7 +1,7 @@
 // https://www.youtube.com/watch?v=uRbJ1OF9aYM&t=21s
 // https://leetcode.com/problems/find-eventual-safe-states/description/
 
-// Your Approach, same TC and SC with the standard approach but uses some extra arrays~
+// Your Approach, same TC and SC with the standard approach from DFS but uses some extra arrays~
 
 // class Solution {
 //     bool dfs(int node, vector<bool> &visited, vector<bool> &recStack, vector<bool> &safe, const vector<vector<int>>& graph) {
@@ -49,4 +49,6 @@
 //     }
 // };
 
-// Standard Approach, Instead of 3 separate arrays (visited, recStack, safe), we compress everything into one array color[], it is not interviewer friendly~
+// Standard Approach of DFS, Instead of 3 separate arrays (visited, recStack, safe), we compress everything into one array color[], it is not interviewer friendly~
+
+// We can also do this using Kahn's Algo~

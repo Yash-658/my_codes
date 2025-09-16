@@ -11,9 +11,9 @@
 //     }
 
 //     vector<int> distance(vertices, INT_MAX);      
-//     distance[0] = 0;
+//     distance[source] = 0;
 //     set<pair<int, int>> distanceNode;
-//     distanceNode.insert({0, 0});
+//     distanceNode.insert({source, 0});
 
 //     while(!distanceNode.empty()) {
 //         pair<int, int> top = *distanceNode.begin();
@@ -24,8 +24,7 @@
 //             int disFromSrc = top.first + pair.second;                       // total distance from source to the neighbour of top, through the top node
 //             if(distance[pair.first] > disFromSrc) {
 //                 // abh ise set mai insert kro, but insert krne se phele check if theres already a pair with this node in the set~
-//                 auto temp = distanceNode.find({distance[pair.first], pair.first});
-//                 if(temp != distanceNode.end()) distanceNode.erase(temp);
+//                 if(distance[pair.first] != INT_MAX) distanceNode.erase({distance[pair.first], pair.first});
 //                 distanceNode.insert({disFromSrc, pair.first});
 //                 distance[pair.first] = disFromSrc;
 //             }

@@ -16,7 +16,7 @@
 //     distanceNode.insert({source, 0});
 
 //     while(!distanceNode.empty()) {
-//         pair<int, int> top = *distanceNode.begin();
+//         pair<int, int> top = *(distanceNode.begin());            // .begin() will give the iterator, * will give the value
 //         distanceNode.erase(distanceNode.begin());
 
 //         // process for all its neighbours~

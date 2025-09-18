@@ -2,6 +2,8 @@
 // Dijkstra's algorithm works on both directed and undirected graphs, as long as all edge weights are non-negative.
 // To find the actual path, we will have to maintain a parent[] array, whenever we will update the distance array for a node, we will update its parent~
 
+// TC: O((V + E) log V)
+
 // #include <bits/stdc++.h> 
 // vector<int> dijkstra(vector<vector<int>> &vec, int vertices, int edges, int source) {
 //     vector<vector<pair<int, int>>> adj(vertices);

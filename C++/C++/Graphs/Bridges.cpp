@@ -35,7 +35,7 @@
 
 //             // check if this connection is vulnerable~
 //             if(low[it] > tin[node]) {
-//                 bridges.push_back({it, node});
+//                 bridges.push_back({node, it});
 //             }
 //         }
 //     }

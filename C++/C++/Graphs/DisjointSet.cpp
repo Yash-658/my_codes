@@ -48,7 +48,7 @@ public:
         int rankV = rank[Ult_v];                         
 
         if(rankU == rankV) {                                
-            // can add any one to anyone as ranks are equal~
+            // can add any one to anyone as ranks are equal~   (when two nodes of same rank are joined, rank increases~)
             parent[Ult_u] = Ult_v;
             rank[Ult_v]++;
         }

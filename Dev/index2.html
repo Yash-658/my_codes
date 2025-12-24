@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My second website</title>
+</head>
+<body>  
+    <h2> SOME TEXT FORMATTING </h2>
+    <p> This is a normal text </p>                                                 <!-- some text formatting -->
+    <p> This is a <b>bold</b> text </p>
+    <p> This is a <i>italic</i> text </p>
+    <p> This is a <u>underlined</u> text </p>
+    <p> This is a <del>deleted</del> text </p>
+    <p> This is a <big>big</big> text </p>
+    <p> This is a <small>small</small> text </p>
+    <p> This is a <sub>subscript</sub> text </p>
+    <p> This is a <sup>superscript</sup> text </p>
+    <p> This is a <tt>monospaced</tt> text </p>
+    <p> This is a <mark style = "background-color: aqua";>marked</mark> text </p>
+    <hr>
+
+    <!-- GROUP TOGETHER HTML-->
+    <!-- <span> inline container to group elements for styling -->
+    <!-- <div> block container to group elements for styling --> 
+
+    <h2> <span style = "background-color: rgb(201, 234, 176);"> This one is using span </span> </h1>
+    <h2> <div style = "background-color: rgb(201, 234, 176);"> This one is using div </div> </hl>
+
+    <p> <span style = "background-color: rgb(201, 234, 176);"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci deleniti culpa consequatur veritatis animi neque optio quos repudiandae, voluptas eos reprehenderit velit voluptatum assumenda veniam ipsa et! Maxime, laboriosam facere. </span> </p>
+    <p> <div style = "background-color: rgb(201, 234, 176);"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci deleniti culpa consequatur veritatis animi neque optio quos repudiandae, voluptas eos reprehenderit velit voluptatum assumenda veniam ipsa et! Maxime, laboriosam facere. </div> </p>
+
+    <hr> 
+    <!-- UNORDERED LIST -->
+    <h3> Unordered List </h3>
+    <ul>
+        <li> milk </li>
+        <li> eggs </li>
+        <li> bread </li>
+        <li> coffee supplies </li>
+        <ul> 
+            <li> coffee beans </li>
+            <li> brown sugar </li>
+        </ul>
+    </ul>
+
+    <!-- ORDERED LIST -->
+    <h3> Ordered List </h3>
+    <ol>
+        <li> study </li>
+        <li> cook food </li>
+        <li> eat </li>
+        <li> gaming </li>
+        <li> sleeping </li>
+    </ol>
+
+    <!-- DESCRIPTION LIST -->
+    <h3> Description List </h3>
+    <dl style = "background-color: tomato; border: 3px solid">                   <!-- dt: discription term, dd: description definition-->
+        <dt> King </dt>
+        <dd> can move one step in all directions </dd>
+        <dt> Queen </dt>
+        <dd> can move any steps in all directions </dd>
+        <dt> Rook </dt>
+        <dd> can move in straight lines </dd>
+    </dl>
+
+    <hr>
+    <h3> STORE HOURS </h3>
+    <table border = "2" style = "background-color: seagreen">                    <!-- So, we use th: tableheaders with the first row to define the headers -->
+        <tr align = "center" style = "background-color: rgb(239, 212, 63);">
+            <th width = "100">Sunday</th>
+            <th width = "100">Monday</th>
+            <th width = "100">Tuesday</th>
+            <th width = "100">Wednesday</th>
+            <th width = "100">Thursday</th>
+            <th width = "100">Friday</th>
+            <th width = "100">Saturday</th>
+        </tr>
+        <tr align = "center">
+            <td>Closed</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>10-6</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>9-5</td>
+        </tr>
+    </table>
+    
+    <hr> <br>
+    <a href = "https://www.google.com" target = _blank>
+        <button style = "font-size: 25px; background-color: bisque; border-radius: 25px;"> click me </button>
+    </a>
+
+    <br>
+    <p id="blank_space"> </p>
+    <button onClick = "doSomething()" style = "font-size: 25px; background-color: tomato; border-radius: 25px;"> click me </button>
+
+    <script>
+        function doSomething() {
+            document.getElementById("blank_space").innerHTML = "TADAAAAAA!";
+        }
+    </script>
+
+    <hr>
+    <form action="index.php" method="post" enctype="multipart/form-data">   <!-- action: its the file which is gonna process this form data, enctype(encryption type) is set to this one usually when we are sending large amount of data, for example: a large image-->
+
+        <label for="username">username: </label>     <!--mentioning "for" so that when I click the label, I automatically enter the inputbox of that id, so id of the input element should match the "for" attribute in the label-->
+        <input type = "text" id="username" placeholder = "broCode" minlength="6" maxlength = "15" required>
+        <br>
+        <label for="password">password:</label>
+        <input type = "password" id="password" placeholder = "yash123" minlength="6" maxlength = "15" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type = "email" id="email" placeholder = "yash123@gmail.com">
+        <br>
+        <label for="phone">Number:</label>
+        <input type = "tel" id="phone" placeholder = "8818898567" minlength="10" maxlength = "10">
+        <br>
+        <label for="bday">birth date:</label>
+        <input type = "date" id="bday">
+        <br>
+        <label for="quantity">quantity:</label>
+        <input type = "number" id="quantity" min="1" max="999" value = "1">   <!-- using value to set a default value-->
+        <br>
+        <label for="gender">Gender:</label>
+
+        <label for="male">male</label>
+        <input type = "radio" id="male" value="male" name="gender">          <!-- using name attribute for grouping all radio buttons together so that only one can be selected at a time-->
+        <label for="female">female</label>                                   <!-- "value" is the actual value that gets submitted to the form if the option is selected, if no value attribute is there, then the value is taken from the text content of the input element. -->
+        <input type = "radio" id="female" value="female" name="gender">
+        <label for="other">other</label>
+        <input type = "radio" id="other" value="other" name="gender">
+        <br>
+
+        <label for="payment"> Payment </label>
+        <select id="payment">
+            <option value="visa"> visa </option>
+            <option value="mastercard"> mastercard </option>
+            <option value="debit"> debit </option>
+        </select>
+        <br>
+
+        <label for="subscribe"> Subscribe </label>
+        <input type="checkbox" id="subscribe">
+        <br>
+
+        <label for="comment"> Comment </label>
+        <textarea id="comment" rows="3" cols="25"> This is good! </textarea>
+        <br>
+
+        <label id="file"> Attach file: </label>
+        <input type="file" id="file" accept="image/png, image/jpeg">
+        <br>
+        <input type = "reset">
+        <input type = "submit">
+    </form>
+    <p> just filler text </p>
+</body>
+</html>

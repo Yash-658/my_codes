@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: crimson;
+}
+
+/* 
+use # when adding css with ID, 
+we can also add css to a group of elements by including them in a class,
+use . when adding css to a class
+*/
+
+/* for colors, we can use hexcodes(#), rgb values*/
+#p1{
+    color: rgb(144, 73, 19);
+}
+#p2{
+    color: #925b36;
+}
+#p3{
+    color: rgb(208, 126, 64);
+}
+#p4{
+    color: hsl(25, 97%, 61%);
+}
+
+.odd{
+    font-size: larger;
+}
+
+.even{
+    font-size: small;
+}

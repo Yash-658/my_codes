@@ -1,9 +1,14 @@
+/* use google fonts for good quality and interesting fonts,
+   we can either use google api to show fonts from a remote server or can download the fonts on the device*/
+
 body{
-    background-color: black;
+    background-color: rgb(30, 94, 48);
 }
 
 h1{
-    color: crimson;
+    color: rgb(191, 30, 62);
+    /* arial is a backup font here, if Verdana won't work then arial will be displayed */
+    font-family: Limelight, arial;
 }
 
 /* 
@@ -12,9 +17,9 @@ we can also add css to a group of elements by including them in a class,
 use . when adding css to a class
 */
 
-/* for colors, we can use hexcodes(#), rgb values*/
-#p1{
-    color: rgb(144, 73, 19);
+/* for colors, we can use hexcodes(#), rgb values, hsl values, */
+/* #p1{
+    color: rgb(47, 162, 200);
 }
 #p2{
     color: #925b36;
@@ -32,4 +37,11 @@ use . when adding css to a class
 
 .even{
     font-size: small;
+} */
+
+p{
+    font-family: Oswald, monospace;
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
 }

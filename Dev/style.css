@@ -20,6 +20,10 @@ h1{
     
     border: 1px solid whitesmoke;
     border-radius: 10px;
+
+    /* format->
+    text-shadow: horizontal_offset vertical_offset blur color*/
+    text-shadow: 4px 4px 5px black;
 }
 
 /* 
@@ -62,3 +66,10 @@ p{
     border-right: 3px double whitesmoke;
     border-radius: 10px;
 }
+
+#box{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(152, 211, 33);
+    box-shadow: 4px 4px 10px green;
+} 

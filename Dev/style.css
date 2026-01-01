@@ -1,11 +1,29 @@
 /* use google fonts for good quality and interesting fonts,
-   we can either use google api to show fonts from a remote server or can download the fonts on the device*/
+   we can either use google api to show fonts from a remote server or can download the fonts on the device
+   
+   use margin to add margin to elements, we can also use left, right, top and bottom margin, we can use margin: auto to align an element to the center
+   flow: use flow to wrap other elements around an element
+
+   Overflow: controls what happens to content that exceeds an element’s box (width/height).
+   It works when parent element have a constrained size (width, height, max-height, etc.).
+        visible (default): Extra content spills outside the box.
+        hidden: Extra content is clipped (not visible).
+        scroll: Scrollbars always shown (even if not needed).
+        auto: Scrollbars appear only when needed.
+
+    display: property specifies if/how n element is displayed
+        block -> Takes full width, starts on a new line.
+        inline -> Takes only content width, stays in same line.
+        inline-block -> Inline but allows width & height attributes.
+        none -> Element is completely removed from layout (not visible).
+*/
 
 body{
     background-color: rgb(30, 94, 48);
 }
 
 h1{
+    
     text-align: center;
 
     color: rgb(191, 30, 62);

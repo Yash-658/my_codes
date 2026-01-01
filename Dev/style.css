@@ -6,9 +6,20 @@ body{
 }
 
 h1{
+    text-align: center;
+
     color: rgb(191, 30, 62);
     /* arial is a backup font here, if Verdana won't work then arial will be displayed */
     font-family: Limelight, arial;
+
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: whitesmoke;
+    we can all these in a single command
+    */
+    
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
 }
 
 /* 
@@ -44,4 +55,10 @@ p{
     font-size: 1em;
     font-weight: 400;
     font-style: normal;
+
+    border-bottom: 3px solid rgb(191, 30, 62);
+    border-top: 3px solid rgb(57, 50, 155);
+    border-left: 3px double whitesmoke;
+    border-right: 3px double whitesmoke;
+    border-radius: 10px;
 }

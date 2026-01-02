@@ -36,4 +36,14 @@ for a link, i.e <a> we can do a:link (to specify properties for the default stat
 
 li:hover{
     background-color: rgb(59, 199, 152);
+    font-size: 1.1em;
+}
+
+#container2 p{
+    background-color: rgb(185, 119, 119);
+    display: none;
+}
+
+#container2:hover p{
+    display: block;
 }

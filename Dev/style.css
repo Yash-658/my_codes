@@ -87,7 +87,6 @@ p{
 
 .box{
     width: 45%;
-    height: auto;
     background-color: rgb(152, 211, 33);
     box-shadow: 4px 4px 4px green, -4px -4px 4px green; /*we can use multiple shadows by using "," I just made a glow effect with it aha */
     border: 2px solid black;

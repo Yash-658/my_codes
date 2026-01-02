@@ -38,6 +38,7 @@ h1{
     
     border: 1px solid whitesmoke;
     border-radius: 10px;
+    padding: 5px;
 
     /* format->
     text-shadow: horizontal_offset vertical_offset blur color*/
@@ -77,12 +78,18 @@ p{
     font-size: 1em;
     font-weight: 400;
     font-style: normal;
+    padding: 4px;
 
     border-bottom: 3px solid rgb(191, 30, 62);
     border-top: 3px solid rgb(57, 50, 155);
     border-left: 3px double whitesmoke;
     border-right: 3px double whitesmoke;
     border-radius: 10px;
+}
+
+* {
+    /* its used so that we don't have to worry about borders and padding while considering width and height */
+    box-sizing: border-box 
 }
 
 .box{
@@ -92,6 +99,7 @@ p{
     border: 2px solid black;
     border-radius: 5px;
     overflow: auto;
-    margin: 5px; 
+    padding: 5px;
     float: left;
+    margin: 4px
 } 

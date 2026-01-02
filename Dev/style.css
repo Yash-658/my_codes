@@ -85,9 +85,13 @@ p{
     border-radius: 10px;
 }
 
-#box{
-    width: 100px;
-    height: 100px;
+.box{
+    width: auto;
+    height: auto;
     background-color: rgb(152, 211, 33);
-    box-shadow: 4px 4px 10px green;
+    box-shadow: 4px 4px 4px green, -4px -4px 4px green; /*we can use multiple shadows by using "," I just made a glow effect with it aha */
+    border: 2px solid black;
+    border-radius: 5px;
+    overflow: auto;
+    margin-bottom: 5px;
 } 

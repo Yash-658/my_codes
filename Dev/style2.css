@@ -28,8 +28,8 @@ It's a relative length unit where 1vh equals 1% of the total height of the brows
     background-color: aqua;
 }
 
-/* pseudo-classes are keywords that are added to a selector to modify the behaviour of an element when they are in a certain state 
-example: 
+/* pseudo-classes: Keywords that are added to a selector to modify the behaviour of an element when they are in a certain state 
+example:
 for a button, we can use "button:hover", "button:active" and can apply certain css properties for these states
 for a link, i.e <a> we can do a:link (to specify properties for the default state) a:hover(for properties when we hover over the link) a:active(when I left click and hold it)
 */
@@ -46,4 +46,11 @@ li:hover{
 
 #container2:hover p{
     display: block;
+}
+
+/* pseudo-elements: Keywords added after a selector that's used to style a specific part of an element
+   format-> selector::pseudo-element*/
+
+h1::first-letter{
+    font-size: 1.5em;
 }

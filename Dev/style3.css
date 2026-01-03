@@ -1,0 +1,45 @@
+/* 
+THESE PROPERTIES ARE FOR "flex"
+
+justify-content: its used for aligning along the main-axis(x-axis if flex-direction = row)
+align-items: used for aligning along cross-axis(opposite of main-axis) */
+*{
+    box-sizing: border-box;
+}
+
+#container{
+    display: flex;
+    height: 90vh;
+    border: 2px solid black;
+    flex-direction: row;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.box{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 5em;
+    border-radius: 15px;
+}
+
+#box1{
+    background-color: pink;
+    justify-self:center;
+    order: 1;  /* by 1, it means last, -1 means first*/
+}
+
+#box2{
+    background-color: orange;
+}
+
+#box3{
+    background-color: blue;
+}
+
+#box4{
+    background-color: red;
+}

@@ -1,0 +1,46 @@
+body{
+    background-color: aliceblue;
+}
+
+.ddm{
+    width: fit-content;
+}
+
+.ddm button{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: medium;
+    color:rgba(245, 245, 245, 0.764);
+    background-color: rgba(47, 34, 34, 0.818);
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.ddm a{
+    display: block;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+    min-width:13vw;
+}
+
+.ddm a:hover{
+    background-color: rgba(202, 199, 199, 0.727);
+}
+
+.ddm .content{
+    background-color: rgb(159, 159, 159);
+    position: absolute;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.755);
+    border-radius: 3px;
+    display: none;
+    left: 20px;
+}
+
+.ddm:hover .content{
+    display: block;
+}
+
+.ddm:hover button{
+    background-color: rgba(39, 28, 28, 0.879);
+}

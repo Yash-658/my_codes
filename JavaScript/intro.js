@@ -12,6 +12,27 @@ Symbol	    Unique identifiers (used for object keys)	Symbol('id')
 
 -> Type of null is "object"
 -> default value of variables in JS is undefined
+
+-> == compares values ignoring their types while '===' compare types and values 
+
+-> The for..of loop iterates over the elements of an iterable object without needing an index:
+
+let fruits = [“apple”, “banana”, “orange”];
+for (let fruit of fruits) {
+ console.log(fruit);
+
+-> Class creation along with construtor
+class Dog {
+ constructor(name, breed) {
+ this.name = name;
+ this.breed = breed;
+ }
+}
+
+-> use 'extends' keyword for inheritance; ex: class ServiceDog extends Dog
+-> use 'new' keyword to create an object
+const myDog = new Dog(“Fred”,
+“Rottweiler”);
 */
 
 // let naam = "Yash";

@@ -26,12 +26,12 @@ let person = {
 
 // dot notation~
 person.naam = 'Noah';
-// console.log(person.naam);
+console.log(person.naam);
 
 // bracket notation for accessing object members~
-// let selection = naam;
-// person[selection] = "raju";
-// console.log(person.naam);
+let selection = 'naam';
+person[selection] = "raju";
+console.log(person.naam);
 
 // initialising an array~   (here, array is an object. Length of arr is variable and can store elements of diff datatypes)
 let selectedColors = ['red', 'blue'];
@@ -76,6 +76,6 @@ function maxOfThree(num1, num2, num3) {
 
 // maxOfThree(15, 20, 99);
 
-for(let i = 0; i <= 10; i++) {
-    console.log(i);
-}
+// for(let i = 0; i <= 10; i++) {
+//     console.log(i);
+// }

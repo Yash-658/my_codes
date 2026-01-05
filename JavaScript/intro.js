@@ -36,6 +36,8 @@ const myDog = new Dog(“Fred”,
 “Rottweiler”);
 
 -> to use "" inside a string, we can use '\' before " in the string, ex: "heyy \"Sarah\""
+-> To get user input: 
+1) using window.prompt
 */
 
 // let naam = "Yash";
@@ -50,12 +52,12 @@ let person = {
 
 // dot notation~
 person.naam = 'Noah';
-console.log(person.naam);
+// console.log(person.naam);
 
 // bracket notation for accessing object members~
 let selection = 'naam';
 person[selection] = "raju";
-console.log(person.naam);
+// console.log(person.naam);
 
 // initialising an array~   (here, array is an object. Length of arr is variable and can store elements of diff datatypes)
 let selectedColors = ['red', 'blue'];
@@ -102,4 +104,19 @@ function maxOfThree(num1, num2, num3) {
 
 // for(let i = 0; i <= 10; i++) {
 //     console.log(i);
+// }
+
+// let name = window.prompt("Your name: ");
+// console.log("Your name is name: "+name);
+
+
+// two ways to get the submitted name appear as heading:
+// function nameSubmit() {
+//     let username = document.getElementById('name').value;
+//     document.getElementById('heading').textContent = `hello ${username}!`;
+// }
+
+// document.getElementById('submit').onclick = function() {
+//     let username = document.getElementById('name').value;
+//     document.getElementById('heading').textContent = `hello ${username}!`;
 // }

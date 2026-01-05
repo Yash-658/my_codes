@@ -1,0 +1,12 @@
+body{
+    background-color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    border-radius: 5px;
+}
+
+input{
+    border-radius: 5px;
+}

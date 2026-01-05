@@ -10,6 +10,7 @@ Null	    Explicitly no value	let x = null;
 BigInt	    Large integers beyond max	                12345678901234567890n
 Symbol	    Unique identifiers (used for object keys)	Symbol('id')
 
+-> we use let and const for declaring variables instead of var cuz they are more modern and safe
 -> Type of null is "object"
 -> default value of variables in JS is undefined
 
@@ -33,6 +34,8 @@ class Dog {
 -> use 'new' keyword to create an object
 const myDog = new Dog(“Fred”,
 “Rottweiler”);
+
+-> to use "" inside a string, we can use '\' before " in the string, ex: "heyy \"Sarah\""
 */
 
 // let naam = "Yash";

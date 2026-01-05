@@ -6,7 +6,7 @@ const resultField = document.getElementById('result');
 console.log(inputField.value);
 
 let convertedValue;
-document.getElementById('submit').onclick = function() {
+function convert() {
     if(inputField.value == "") {
         window.alert("Please enter an appropriate value to convert"); 
         return;

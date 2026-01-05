@@ -17,7 +17,7 @@ body{
     align-items: center;
     border: 1px solid;
     border-radius: 5px;
-
+    box-shadow: 1px 1px 5px #0000006f, -1px -1px 5px #0000006f;
     font-family: monospace;
     font-size: large;
 }

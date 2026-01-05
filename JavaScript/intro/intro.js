@@ -116,7 +116,7 @@ function maxOfThree(num1, num2, num3) {
 //     document.getElementById('heading').textContent = `hello ${username}!`;
 // }
 
-// document.getElementById('submit').onclick = function() {
-//     let username = document.getElementById('name').value;
-//     document.getElementById('heading').textContent = `hello ${username}!`;
-// }
+document.getElementById('submit').onclick = function() {
+    let username = document.getElementById('name').value;
+    document.getElementById('heading').textContent = `hello ${username}!`;
+}

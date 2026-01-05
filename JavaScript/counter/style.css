@@ -1,0 +1,23 @@
+body{
+    background-color: aqua;
+}
+
+#display{
+    font-family: monospace;
+    text-align: center;
+    font-size:100px;
+}
+
+#nav{
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    background-color: rgb(246, 189, 115);
+    font-size: large;
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+}

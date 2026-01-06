@@ -18,3 +18,11 @@ super = parent object
 
 .sort() methods sorts lexographically, to sort an array of numbers named "numbers":
 numbers.sort((a,b) => a-b);
+
+we can create and use "date" objects of the "date" class to access and format dates according to our desired format
+
+A concept named "closure", not that important
+
+setTimeout() function is used to run a function after a desired setTimeout
+setInterval() function is used to run a function repeatedly after an interval
+

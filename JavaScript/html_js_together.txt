@@ -4,3 +4,8 @@ spread = ... allows an iterable such as an array or a string to be expanded into
 
 rest parameters(like *args)= (...rest) allows a fxn to work with variable no. of arguments by bundling them into an array
 
+callback = is a fxn that is passed as an argument to another function.
+           used to handle asynchronous operation:
+           1) reading a file
+           2) network requests
+           3) Interacting with databases 

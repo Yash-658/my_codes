@@ -3,8 +3,6 @@ const cel_to_far = document.getElementById('cel_to_far');
 const far_to_cel = document.getElementById('far_to_cel');
 const resultField = document.getElementById('result');
 
-console.log(inputField.value);
-
 let convertedValue;
 let symbol;
 function convert() {

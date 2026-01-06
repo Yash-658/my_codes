@@ -1,1 +1,6 @@
 .checked = property that determines the checked state of an HTML checkbox or radio button element
+
+spread = ... allows an iterable such as an array or a string to be expanded into seperate elements
+
+rest parameters(like *args)= (...rest) allows a fxn to work with variable no. of arguments by bundling them into an array
+

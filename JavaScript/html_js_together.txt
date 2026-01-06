@@ -15,3 +15,6 @@ static = static keyword is used to define static methods and properties that bel
 super = keyword used in child classes to call the constructor or access the properties and methods of a parent(superclass)
 this = this object
 super = parent object
+
+.sort() methods sorts lexographically, to sort an array of numbers named "numbers":
+numbers.sort((a,b) => a-b);

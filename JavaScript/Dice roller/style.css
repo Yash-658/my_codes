@@ -3,13 +3,13 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: hsl(36, 100%, 90%);;
+    background-color: hsl(85, 40%, 51%);
 }
 
 #main{
     width: 300px;
     min-height: 200px;
-    background-color: hsl(36, 100%, 80%);
+    background-color: hsl(85, 40%, 65%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,7 +33,7 @@ input{
     padding: 5px 15px;
     font-size: medium;
     border-radius: 4px;
-    background-color: hsl(26, 92%, 65%);
+    background-color: rgb(233, 169, 41);
 }
 
 #button1:hover{

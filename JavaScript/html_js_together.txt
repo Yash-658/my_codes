@@ -25,4 +25,5 @@ A concept named "closure", not that important
 
 setTimeout() function is used to run a function after a desired setTimeout
 setInterval() function is used to run a function repeatedly after an interval
+clearInterval() fxn is used to stop a setInterval() function
 

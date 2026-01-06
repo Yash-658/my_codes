@@ -9,3 +9,9 @@ callback = is a fxn that is passed as an argument to another function.
            1) reading a file
            2) network requests
            3) Interacting with databases 
+
+static = static keyword is used to define static methods and properties that belongs to a class itself
+
+super = keyword used in child classes to call the constructor or access the properties and methods of a parent(superclass)
+this = this object
+super = parent object

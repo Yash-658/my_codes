@@ -27,3 +27,29 @@ setTimeout() function is used to run a function after a desired setTimeout
 setInterval() function is used to run a function repeatedly after an interval
 clearInterval() fxn is used to stop a setInterval() function
 
+synchronous = executes line by line in a sequential manner, code that waits for an opeartion to complete
+asynchronous = allows multiple operation to be performed concurrently without waiting   
+               doesn't block the execution flow and allows the program to continue
+               Handled with: callbacks, async/await, Promises 
+
+ERROR HANDLING: an error is a mistake that disrupts the normal flow of program if they are uncaught.
+
+try{} : encloses code that might potentially cause an error
+catch{} : catch and handle any thrown errors from try{}
+finally{} : (optional) code that always executes. Used mostly for cleanups
+
+try{
+    console.log(x);
+    //NETWORK ERRORS, PROMISE REJECTION, SECURITY ISSUES
+}
+
+catch(error) {
+    console.error(error);  // we can also use console.log but .error displays the catched error in red, so easier for debugging
+}
+
+finally{
+    // CLOSE FILES, CLOSE CONNECTIONS, RELEASE RESOURSES 
+    console.log("This always executes");
+}
+
+If we want to throw an error of our own, use "throw new Error("your error message")";

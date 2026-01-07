@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <input id="display" readonly></input>
+        <div id="buttonArea">
+            <button id="7" class="numberButton" onclick="appendToDisplay('7')">7</button>
+            <button id="8" class="numberButton" onclick="appendToDisplay('8')">8</button>
+            <button id="9" class="numberButton" onclick="appendToDisplay('9')">9</button>
+            <button id="+" class="oprButton" onclick="appendToDisplay('+')">+</button>
+            <button id="4" class="numberButton" onclick="appendToDisplay('4')">4</button>
+            <button id="5" class="numberButton" onclick="appendToDisplay('5')">5</button>
+            <button id="6" class="numberButton" onclick="appendToDisplay('6')">6</button>
+            <button id="-" class="oprButton" onclick="appendToDisplay('-')">-</button>
+            <button id="1" class="numberButton" onclick="appendToDisplay('1')">1</button>
+            <button id="2" class="numberButton" onclick="appendToDisplay('2')">2</button>
+            <button id="3" class="numberButton" onclick="appendToDisplay('3')">3</button>
+            <button id="*" class="oprButton" onclick="appendToDisplay('*')">x</button>
+            <button id="." class="numberButton" onclick="appendToDisplay('.')">.</button>
+            <button id="0" class="numberButton" onclick="appendToDisplay('0')">0</button>
+            <button id="=" class="oprButton" onclick="appendToDisplay('=')">=</button>
+            <button id="/" class="oprButton" onclick="appendToDisplay('/')">/</button>
+            <button id="CE" class="oprButton" onclick="appendToDisplay('CE')">CE</button>
+            <!-- <button id="(" class="oprButton" onclick="appendToDisplay('(')">(</button>
+            <button id=")" class="oprButton" onclick="appendToDisplay(')')">)</button> -->
+            <button id="del" class="oprButton" onclick="appendToDisplay('del')">❌</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

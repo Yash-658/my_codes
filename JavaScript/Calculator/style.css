@@ -46,6 +46,7 @@ button{
     margin: 5px;
     border: 0cap;
     background-color:hsl(0, 0%, 26%);
+    font-weight: bold;
 }
 
 .numberButton{

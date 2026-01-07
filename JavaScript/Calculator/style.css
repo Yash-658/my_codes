@@ -47,7 +47,7 @@ button{
     border: 0cap;
     background-color:hsl(0, 0%, 26%);
     font-weight: bold;
-    box-shadow: 1px 1px 5px;
+    box-shadow: 1px 1px 4px;
 }
 
 .numberButton{
@@ -64,4 +64,12 @@ button{
 
 .oprButton:hover{
     background-color: hsl(35, 81%, 64%);
+}
+
+.numberButton:active{
+    background-color:hsl(0, 0%, 66%);
+}
+
+.oprButton:active{
+    background-color: hsl(35, 81%, 74%);
 }

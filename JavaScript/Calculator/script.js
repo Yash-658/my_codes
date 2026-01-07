@@ -13,6 +13,7 @@ function appendToDisplay(value) {
     else if(value === "=") {
         try{
             exp = eval(exp);
+            exp = String(exp);
         }
 
         catch(error) {

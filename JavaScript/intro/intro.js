@@ -120,3 +120,7 @@ document.getElementById('submit').onclick = function() {
     let username = document.getElementById('name').value;
     document.getElementById('heading').textContent = `hello ${username}!`;
 }
+
+document.title = "raju makda";
+const name = document.getElementById("heading");
+

@@ -10,7 +10,10 @@ newh1.style.fontFamily = "monospace";
 
 // 3) APPEND ELEMENT TO DOM 
 // document.body.append(newh1);                        // to add it as the last child
-document.getElementById("box1").prepend(newh1);        // to add it as the first child
+// document.getElementById("box1").prepend(newh1);        // to add it as the first child
+
+// To add it before a specific element/child~
+document.body.insertBefore(newh1, box2);
 
 // 4) REMOVE THE ELEMENT
-document.getElementById("box1").removeChild(newh1);
+// document.getElementById("box1").removeChild(newh1);

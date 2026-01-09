@@ -8,7 +8,7 @@
 5. document.querySelectorAll()     // NODELIST
 */
 
-// const fruits = document.getElementsByClassName("fruits");
+const fruits = document.getElementsByClassName("fruits");
 
 // console.log(fruits);
 
@@ -55,12 +55,16 @@ ulELements.forEach(ulElement => {
     ulElement.firstElementChild.style.backgroundColor= "pink";
 })
 
-const fruits = document.getElementById("fruits");
-fruits.lastElementChild.style.backgroundColor = "lightgreen";
-
 const desserts = document.getElementById("desserts");
+desserts.lastElementChild.style.backgroundColor = "violet";
 
+desserts.previousElementSibling.style.fontSize = "1.5em";
+desserts.nextElementSibling.style.fontSize = "0.8em";
 
+console.dir(desserts.parentElement);
+desserts.parentElement.style.backgroundColor = "purple";
+desserts.parentElement.style.padding = "5px";
 
-
+const collection = document.getElementById("collection");
+console.log(collection.children);
 

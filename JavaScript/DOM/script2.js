@@ -29,16 +29,19 @@ document.body.insertBefore(new_a, box2);
 
 const myBox = document.getElementById("myBox");
 myBox.addEventListener("mouseover", event => {
+
     event.target.style.backgroundColor = "rgba(222, 31, 203, 1)";     // instead of event.target we can also use document.elementById()
-    event.target.textContent = "dhyan se! 😋";
+    myBox.textContent = "dhyan se! 😋";
 });
 
 myBox.addEventListener("mouseout", event => {
     myBox.style.backgroundColor = "antiquewhite";
     myBox.textContent = "dbao mujhe! 🤤";
+    document.body.style.backgroundColor = "white";
 });
 
 myBox.addEventListener("click", event => {
-    myBox.style.backgroundColor = "tomato";
+    myBox.style.backgroundColor = "#F4AFB3";
     myBox.textContent = "ahhh! 🫠😫";
+    document.body.style.backgroundColor = "#FF1D8D";
 });

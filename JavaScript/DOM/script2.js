@@ -22,3 +22,23 @@ document.body.insertBefore(new_a, box2);
 
 // 4) REMOVE THE ELEMENT
 // document.getElementById("box1").removeChild(newh1);
+
+// -------------------------------------------------------------------------------------------------------
+// eventListener = Listen for specific events to create interactive web pages events~
+//                 events: click, mouseover, mouseout       (we use addEventListener(event, callback))
+
+const myBox = document.getElementById("myBox");
+myBox.addEventListener("mouseover", event => {
+    event.target.style.backgroundColor = "rgba(222, 31, 203, 1)";     // instead of event.target we can also use document.elementById()
+    event.target.textContent = "dhyan se! 😋";
+});
+
+myBox.addEventListener("mouseout", event => {
+    myBox.style.backgroundColor = "antiquewhite";
+    myBox.textContent = "dbao mujhe! 🤤";
+});
+
+myBox.addEventListener("click", event => {
+    myBox.style.backgroundColor = "tomato";
+    myBox.textContent = "ahhh! 🫠😫";
+});

@@ -25,7 +25,7 @@ document.body.insertBefore(new_a, box2);
 
 // -------------------------------------------------------------------------------------------------------
 // eventListener = Listen for specific events to create interactive web pages events~
-//                 events: click, mouseover, mouseout       (we use addEventListener(event, callback))
+//                 events: click, mouseover, mouseout       (we use addEventListener(event, callback/arrow_fxn))
 
 const myBox = document.getElementById("myBox");
 myBox.addEventListener("mouseover", event => {
@@ -42,6 +42,6 @@ myBox.addEventListener("mouseout", event => {
 
 myBox.addEventListener("click", event => {
     myBox.style.backgroundColor = "#F4AFB3";
-    myBox.textContent = "ahhh! 🫠😫";
+    myBox.textContent = "ahhh! 🫠😫"; 
     document.body.style.backgroundColor = "#FF1D8D";
 });

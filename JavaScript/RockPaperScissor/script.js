@@ -51,7 +51,7 @@ function play(playerChoice) {
         
         case "bot":
             result.textContent =  `BOT WON!`;
-            result.style.color = "tomato";
+            result.style.color = "red";
             botScore++;
             break;
         

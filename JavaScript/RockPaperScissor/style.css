@@ -1,5 +1,14 @@
+#heading{
+    background-image: url("images/bg_image.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 200px;
+    width: 500px;
+}
+
 body{
-    background-image: url("images/bg_image.avif");
+    background-color: pink;
 }
 
 main{
@@ -7,6 +16,7 @@ main{
     flex-direction: column;
     text-align: center;
     font-family:cursive;
+    align-items: center;
 }
 
 #options img{
@@ -17,7 +27,7 @@ main{
 p{
     font-size: 1.5em;
     margin: 7px;
-    
+
 }
 
 button{

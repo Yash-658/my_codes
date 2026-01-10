@@ -15,7 +15,8 @@
         block -> Takes full width, starts on a new line.
         inline -> Takes only content width, stays in same line.
         inline-block -> Inline but allows width & height attributes.
-        none -> Element is completely removed from layout (not visible).
+        none -> Element is completely removed from layout and no space is reserved for it (not visible).
+        (If you want to just hide the element but reserve space for it, use visibility = hidden)
 */
 
 body{

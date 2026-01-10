@@ -82,7 +82,7 @@ document.addEventListener("keydown", (event) => {
         x += moveAmount;
     }
 
-    ourBox.style.top = String(`${y}px`);
-    ourBox.style.left = String(`${x}px`);
+    ourBox.style.top =`${y}px`;
+    ourBox.style.left = `${x}px`;
 })
 

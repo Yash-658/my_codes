@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Rock Paper Scissor </title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/10339/10339556.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1> Rock Paper Scissor </h1>
+        <h1> Beat the bot! </h2>
+
+        <inline id="options">
+            <button id="rock" onclick="play('rock')"> <img src="images/rock.png" alt="rock" width=100px></button>
+            <button id="rock" onclick="play('paper')"> <img src="images/paper.png" alt="paper" width=100px></button>
+            <button id="rock" onclick="play('scissors')"> <img src="images/scissor.png" alt="scissor" width=100px ></button>
+        </inline>
+    
+        <h2 id="playerChoice"> You chose: ____</h2>
+        <h2 id="botChoice"> Bot chose: ____</h2>
+        <h1 id="result">___</h1>
+        <h3 id="pScore"> Player Score: ___</h3>
+        <h3 id="bScore"> Bot Score: ___</h3>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

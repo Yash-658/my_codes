@@ -1,0 +1,27 @@
+body{
+    background-image: url("images/bg_image.avif");
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family:cursive;
+}
+
+#options img{
+    border-radius: 80px;
+    width: 150px;
+}
+
+button{
+    border: none;
+    border-radius: 100px;
+    padding: 1px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0 0 9px ;
+}

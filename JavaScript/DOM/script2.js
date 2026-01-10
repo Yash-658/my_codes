@@ -66,7 +66,7 @@ document.addEventListener("keydown", (event) => {
 
     event.preventDefault();        // this is used so that the arrow up and down keys doesn't do the default scrolling behaviour
 
-    if(event.key == 'ArrowUp' && y >= 0) {
+    if(event.key == 'ArrowUp' && y > 0) {
         y -= moveAmount;
     }
 
@@ -74,7 +74,7 @@ document.addEventListener("keydown", (event) => {
         y += moveAmount;
     }
 
-    if(event.key == 'ArrowLeft' && x >= 0) {
+    if(event.key == 'ArrowLeft' && x > 0) {
         x -= moveAmount;
     }
 

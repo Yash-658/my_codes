@@ -33,8 +33,8 @@ for(let li of listItems) {
 }
 
 // querySelector and querySelectorAll ka dekhlo ek baar aur https://youtu.be/lfmg-EJ 8gm4?si=9KhyHYFb1wwivPQk, 
-// basically querySelectorAll returns a NodeList which is different from an HTML COLLECTION as it has built-in methods like forEach() and 
-// is static, that means its an snapshot of the DOM and HTML collections are live(The collection automatically updates if the DOM changes)
+// basically querySelectorAll returns a NodeList which is different from an HTML COLLECTION as it has built-in method like forEach() and 
+// is static, that means its an snapshot of the DOM and HTML collections are live(The collection automatically updates if the DOM changes unlike NodeLists)
 
 // -----------------------------------------------------------------------------------------------------------------------------------------------
 

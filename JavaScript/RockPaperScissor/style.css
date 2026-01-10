@@ -14,6 +14,12 @@ main{
     width: 150px;
 }
 
+p{
+    font-size: 1.5em;
+    margin: 7px;
+    
+}
+
 button{
     border: none;
     border-radius: 100px;

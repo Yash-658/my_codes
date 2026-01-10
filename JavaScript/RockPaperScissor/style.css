@@ -8,15 +8,22 @@
 }
 
 body{
-    background-color: pink;
+    background-color: hsl(350, 100%, 78%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main{
     display: flex;
+    width: fit-content;
+    height: 650px;
+    background-color: hsl(350, 100%, 88%);
     flex-direction: column;
-    text-align: center;
-    font-family:cursive;
+    justify-content: center;
     align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #0000006f;
 }
 
 #options img{
@@ -25,9 +32,8 @@ main{
 }
 
 p{
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin: 7px;
-
 }
 
 button{

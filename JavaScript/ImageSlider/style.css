@@ -38,15 +38,15 @@ button:hover{
 
 #image{
     width: 100%;
-    transition: opacity 0.7s ease;
-    opacity: 1;
+    /* transition: opacity 0.7s ease;
+    opacity: 1; */
 }
 
 /* applied to fade out the current image, ABHI YE COMPLETE NHI HUA*/
-#image.fade-out {
+/* #image.fade-out {
   opacity: 0;
   transition: opacity 0.4s linear;
-}
+} */
 
 #previous{
     left: 0px;

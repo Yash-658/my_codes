@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FEFEFE;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    position: relative;           /* this is done so that we can use absolute positioning in buttons class*/
+    align-items: center;
+    justify-content: center;
+    width: 1500px;
+    height: 700px;
+    overflow: hidden;
+}
+
+button{
+    position: absolute;
+    font-size: 7em;
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(129, 129, 129, 0.7);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#image{
+    width: 100%;
+}
+
+#previous{
+    left: 0px;
+}
+
+#next{
+    right: 0px;
+}

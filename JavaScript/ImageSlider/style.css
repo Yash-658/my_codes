@@ -27,6 +27,13 @@ button{
     color: white;
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.7s ease;
+}
+
+button:hover{
+    font-size: 8em;
+    color: hsl(0, 1%, 50%);
+    background-color: hsl(0, 1%, 77%);
 }
 
 #image{

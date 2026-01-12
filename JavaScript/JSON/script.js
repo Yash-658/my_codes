@@ -8,21 +8,8 @@ JSON: (JavaScript Object Notation) data-interchaneg format used for exchanging d
     .json() = method is used to parse JSON-formatted data into a native object.
 */
 
-function fetching() {
-    return new Promise((resolve, reject) => {
-    
-            fetch("people.json")
-                .then(response => response.json())
-                .then(values => {
-                    values.forEach(value => console.log("name: " + value.name))})
-                .then(resolve("Completed succesfully!"))
-        
-    })
-}
 
-async function opr() {
-    const status = await fetching();
-    console.log(status);
-}
-
-opr();
+fetch("people.json")
+    .then(response => response.json())
+    .then(values => values.forEach(value => console.log("name: " + value.name)))
+    .then(() => console.log("Completed Successfully!"))

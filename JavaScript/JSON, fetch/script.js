@@ -8,6 +8,13 @@ JSON: (JavaScript Object Notation) data-interchaneg format used for exchanging d
     .json() = method is used to parse JSON-formatted data into a native object.
 */
 
+/*
+Fetch = Function used for making HTTP requests to fetch resources. (JSON style data, images, files)
+Simplifies asynchronous data fetching in JavaScript and 
+used for interacting with APIs to retrieve and send data asynchronously over the web.
+    format: fetch(url, {options})
+*/ 
+
 // for fetching from a local JSON file~
 
 // fetch("people.json")

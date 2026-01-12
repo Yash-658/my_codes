@@ -16,6 +16,15 @@ DO THESE CHORES:
 3) Take out the trash
 */
 
+/*
+Async/Await:  Async: makes a fxn returns a promise
+              Await: makes an async fxn wait for a promise
+
+              Allows you to write asynchronous code in a synchronous manner,
+              Async doesn't have resolve or reject parameters
+              Everything after Await is placed in an event queue
+*/
+
 function walkDog() {
     return new Promise((resolve, reject) => {
         const dogWalked = true;
@@ -49,7 +58,35 @@ function takeOutTrash() {
     })
 }
 
-walkDog().then((value) => {console.log(value); return cleanKitchen();})
-         .then((value) => {console.log(value); return takeOutTrash();})
-         .then((value) => {console.log(value); console.log("All chores are completed!");})
+// walkDog().then((value) => {console.log(value); return cleanKitchen();})
+//          .then((value) => {console.log(value); return takeOutTrash();})
+//          .then((value) => {console.log(value); console.log("All chores are completed!");})
+//          .catch(error => console.error(error))
+
+// alternative of method chaining like above is to use async/await~
+
+async function doChores() {
+
+    try {
+        const walkDogResult = await walkDog();
+        console.log(walkDogResult);
+
+        const cleanKitchenResult = await cleanKitchen();
+        console.log(cleanKitchenResult);
+
+
+        const takeOutTrashResult = await takeOutTrash();
+        console.log(takeOutTrashResult);
+    }
+    catch (error) {
+        console.error(error);
+    }
+
+    finally {
+        console.log("Completed");
+    }
+}
+
+doChores();
+
 

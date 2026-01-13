@@ -31,20 +31,37 @@ button{
 
 main{
     display: flex;
-    height: 400px;
+    height: max-content;
     flex-direction: column;
     width: 300px;
     box-shadow: 0 0 5px;
     border-radius: 5px;
-    background-image: linear-gradient(  hsl(206, 57%, 61%), hsl(50, 60%, 55%));
+    background-image: linear-gradient(  hsl(206, 82%, 69%), hsl(50, 47%, 56%));
     align-items: center;
     justify-content: center;
 }
 
-.cityName{
-
+#cityName{
+    color: hsla(0, 0%, 15%, 0.886);
+    font-size: 2.2em;
 }
 
-.temp{
+#temp{
+    color: hsla(0, 0%, 15%, 0.886);
+    font-size: 2.2em;
+}
 
+#humidity{
+    font-size: 1.2em;
+    color: hsla(0, 0%, 15%, 0.918);
+}
+
+#description{
+    font-size: 1.2em;
+    font-style: italic;
+    color: hsla(0, 0%, 15%, 0.918);
+}
+
+#emoji{
+    font-size: 4em;
 }

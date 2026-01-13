@@ -37,7 +37,7 @@ async function fetchPokemon() {
 
         if (!response.ok) {
             alert("Please enter a valid pokemon name!");
-            input.value = "";
+            location.reload();       // this reloads the page
             throw new Error("Failed to fetch resources!");
         }
 

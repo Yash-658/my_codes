@@ -63,3 +63,4 @@ DOM: Document Object Model
 
 https://en.wikipedia.org/wiki/Document_Object_Model
 
+To refresh an HTML page using JavaScript, use location.reload()

@@ -36,6 +36,7 @@ async function fetchPokemon() {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${input.value.toLowerCase()}`);
 
         if (!response.ok) {
+            alert("Please enter a valid pokemon name!");
             throw new Error("Failed to fetch resources!");
         }
 

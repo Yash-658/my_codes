@@ -27,10 +27,15 @@ button{
     padding: 5px 10px;
     color: white;
     border-color: black;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(120, 61%, 35%);
 }
 
 main{
-    display: flex;
+    display: none;
     height: max-content;
     flex-direction: column;
     width: 300px;

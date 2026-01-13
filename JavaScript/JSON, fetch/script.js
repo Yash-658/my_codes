@@ -41,7 +41,7 @@ async function fetchPokemon() {
         }
 
         const data = await response.json();
-        console.log(data.name);
+        // console.log(data.name);
         imgEl.src = data.sprites.front_default;
         imgEl.style.display = "block";
     }

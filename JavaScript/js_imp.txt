@@ -65,6 +65,19 @@ https://en.wikipedia.org/wiki/Document_Object_Model
 
 To refresh an HTML page using JavaScript, use location.reload()
 
-CSS TIP:
-By default, CSS uses box-sizing: content-box, where the width and height properties apply only to the element's content area. Any added padding and borders increase the element's actual rendered size on the page. 
+***CSS TIP***:
+1) By default, CSS uses box-sizing: content-box, where the width and height properties apply only to the element's content area. Any added padding and borders increase the element's actual rendered size on the page. 
 With box-sizing: border-box, the specified width and height include the content, padding, and borders within those dimensions. 
+
+2) To use absolute positioning with an element, we have to declare the parent's element position attribute to relative
+
+3) em = relative to parent container
+   rem = relative to root (HTML)
+
+4) To declare variables inside a CSS file -> 
+:root {
+  --main-color: blue;
+  --big-size: 16px;
+}
+
+and "var(--name)" to use the variable

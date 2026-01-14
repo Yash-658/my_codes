@@ -64,3 +64,7 @@ DOM: Document Object Model
 https://en.wikipedia.org/wiki/Document_Object_Model
 
 To refresh an HTML page using JavaScript, use location.reload()
+
+CSS TIP:
+By default, CSS uses box-sizing: content-box, where the width and height properties apply only to the element's content area. Any added padding and borders increase the element's actual rendered size on the page. 
+With box-sizing: border-box, the specified width and height include the content, padding, and borders within those dimensions. 

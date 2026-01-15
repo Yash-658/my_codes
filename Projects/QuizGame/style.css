@@ -33,7 +33,7 @@ body{
 }
 
 #intro_screen{
-    display: none;
+    display: flex;
 }
 
 h1{
@@ -65,7 +65,7 @@ button:hover{
 }
 
 #question_screen{
-    display: flex;
+    display: none;
 }
 
 #question_screen h2{
@@ -104,6 +104,19 @@ button:hover{
     border-color: hsl(46, 25%, 80%);
 }
 
+#options .right_option{
+    background-color: hsl(143, 100%, 95%);
+    color: hsl(133, 37%, 43%);
+    border-color: hsl(143, 46%, 80%);
+}
+
+#options .wrong_option{
+    background-color: hsl(0, 100%, 97%);
+    color: hsl(356, 53%, 59%);
+    border-color: hsl(347, 47%, 85%);
+}
+
+
 #progress_bar{
     background-color: hsl(40, 53%, 93%);
     margin-top: 20px;
@@ -117,6 +130,7 @@ button:hover{
     width: 0%;
     height: 100%;
     background-color: var(--heading-color);
+    transition: all 0.3s ease;
 }
 
 #result_screen{

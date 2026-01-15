@@ -10,7 +10,7 @@
     <div id="intro_screen" class="screen">
         <h1> Quiz Time! </h1>
         <p> Test your knowledge with these fun science questions </p>
-        <button id="start_button">Start Quiz</button>
+        <button onClick='start()'>Start Quiz</button>
     </div>
 
     <div id="question_screen" class="screen">
@@ -21,10 +21,10 @@
         </inline>
 
         <div id="options">
-            <button onclick='getAnswer()'>option1</button>
-            <button onclick='getAnswer()'>option2</button>
-            <button onclick='getAnswer()'>option3</button>
-            <button onclick='getAnswer()'>option4</button>
+            <button id="option1" onclick='getAnswer(1)'>option1</button>
+            <button id="option2" onclick='getAnswer(2)'>option2</button>
+            <button id="option3" onclick='getAnswer(3)'>option3</button>
+            <button id="option4" onclick='getAnswer(4)'>option4</button>
         </div>
         <div id="progress_bar">
             <div id="progress"></div>
@@ -34,12 +34,11 @@
     <div id="result_screen" class="screen">
         <h1> Quiz Results </h1>
         <div>
-            <p> You Scored _ out of _ </p>
-            <h2 id="feedback"> Good Efforts! Keep Learning! </h2>
+            <p id="scores"> You scored _ out of _ </p>
+            <h2 id="feedback"> Good efforts! Keep learning! </h2>
         </div>
         <button onClick="restart()">Restart Quiz</button>
     </div>
-</body>
-    
+    <script src="script.js"></script>
 </body>
 </html>

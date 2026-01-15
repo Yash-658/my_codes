@@ -20,7 +20,7 @@ const options = [['1942','1945','1947','1950'],['Red Fort','Hawa Mahal','Qutub M
 const correctOptions = ['3','4','2','4'];
 const feedbacks = ["Don't worry, you will get there!", "Good effort! Keep learning", "Got all of 'em! Excellent work!"];
 
-let qNum = 0, score = 0;
+let qNum = 0, score = 0, opr = false;
 function start() {      // start button 
     startScreen.style.display = 'none';
     showQuestion();
@@ -45,6 +45,9 @@ function showQuestion() {
 }
 
 function getAnswer(option) {      // after an option is selected 
+    if(opr === true) return;
+    opr = true;
+    
     if(correctOptions[qNum] == option) {
         // answer is right, increase score and change appearance of the correct Option
         score++;
@@ -65,6 +68,7 @@ function getAnswer(option) {      // after an option is selected
         if(correctOptions[qNum - 1] != option) {
             optionsEl[option - 1].classList.toggle('wrong_option');
         }
+        opr = false;
     }, 2000);
 }
 

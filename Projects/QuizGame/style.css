@@ -112,13 +112,13 @@ button:hover{
     border-color: hsl(46, 25%, 80%);
 }
 
-#options .right_option{
+#options .right_option, #options .right_option:hover{
     background-color: hsl(143, 100%, 95%);
     color: hsl(133, 37%, 43%);
     border-color: hsl(143, 46%, 80%);
 }
 
-#options .wrong_option{
+#options .wrong_option, #options .wrong_option:hover{
     background-color: hsl(0, 100%, 97%);
     color: hsl(356, 53%, 59%);
     border-color: hsl(347, 47%, 85%);

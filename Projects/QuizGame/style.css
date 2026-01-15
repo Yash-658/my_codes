@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --heading-color: hsl(19, 81%, 55%);
+    --bg-color: hsl(44, 41%, 93%);
+    --text-color: hsl(0, 0%, 40%); 
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    font-family: system-ui;
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 1rem;
+    background-color: white;
+    padding: 1.3rem;
+    max-width: 600px;
+    min-width: 500px;
+}
+
+#intro_screen{
+    display: none;
+}
+
+h1{
+    color: var(--heading-color);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+#intro_screen p{
+    color: var(--text-color);
+    padding: 25px 20px;
+    font-size: 1em;
+}
+
+button{
+    background-color: var(--heading-color);
+    color: white;
+    padding: 10px 17px;
+    border-radius: 0.5em;
+    font-size: 1em;
+    border: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(19, 81%, 48%);
+}
+
+#question_screen{
+    display: flex;
+}
+
+#question_screen h2{
+    color: rgba(0, 0, 0, 0.790);
+    padding: 5px 20px;
+    font-size: 1.5em;
+}
+
+#info_tab{
+    display: flex;
+    width: 100%;
+    margin: 25px; 
+    justify-content: space-between;
+    color: var(--text-color);
+}
+
+#options{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+#options button{
+    width: 100%;
+    background-color: hsl(40, 53%, 93%);
+    color: hsla(0, 0%, 0%, 0.73);
+    text-align: left;
+    padding: 12px 12px;
+    border: 2px solid hsl(46, 25%, 86%);
+    transition: none;
+}
+
+#options button:hover{
+    background-color: hsl(40, 53%, 87%);
+    border-color: hsl(46, 25%, 80%);
+}
+
+#progress_bar{
+    background-color: hsl(40, 53%, 93%);
+    margin-top: 20px;
+    width: 100%;
+    height: 10px;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+#progress{
+    width: 0%;
+    height: 100%;
+    background-color: var(--heading-color);
+}
+
+#result_screen{
+    display: none;
+}
+
+#result_screen div{
+    text-align: center;
+    background-color: hsl(40, 53%, 93%);
+    border-radius: 0.4em;
+    padding: 15px 30px;
+    margin: 20px 15px;
+}
+
+#result_screen div p{
+    color: hsl(0, 0%, 20%);
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+#result_screen div h2{
+    color: var(--heading-color);
+    padding: 5px 20px;
+}

@@ -7,6 +7,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="intro_screen" class="screen">
+        <h1> Quiz Time! </h1>
+        <p> Test your knowledge with these fun science questions </p>
+        <button id="start_button">Start Quiz</button>
+    </div>
+
+    <div id="question_screen" class="screen">
+        <h2 id="question"> What is the capital of France? </h2>
+        <inline id="info_tab">
+            <p id="q_number"> Question _ of _ </p>
+            <p id="curr_score"> Score: _ </p>
+        </inline>
+
+        <div id="options">
+            <button onclick='getAnswer()'>option1</button>
+            <button onclick='getAnswer()'>option2</button>
+            <button onclick='getAnswer()'>option3</button>
+            <button onclick='getAnswer()'>option4</button>
+        </div>
+        <div id="progress_bar">
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    <div id="result_screen" class="screen">
+        <h1> Quiz Results </h1>
+        <div>
+            <p> You Scored _ out of _ </p>
+            <h2 id="feedback"> Good Efforts! Keep Learning! </h2>
+        </div>
+        <button onClick="restart()">Restart Quiz</button>
+    </div>
+</body>
     
 </body>
 </html>

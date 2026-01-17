@@ -49,7 +49,7 @@ int main()
    int a = 4, b = 6;
    cout<<" a&b : "<< (a & b)<<endl;
    cout<<" a|b : "<< (a | b)<<endl;
-   cout<<" ~a : "<< (~a)<<endl;
+   cout<<" ~a : "<< (~a)<<endl;               // Bitwise NOT (~)
    cout<<" a^b : "<< (a ^ b)<<endl;           //XOR or EX-OR operator, odd no. of elements ko 1, even walo ko 0, for ex: 1^1 = 0, 1^0 = 1
 return 0;
 }  

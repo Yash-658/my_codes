@@ -11,9 +11,21 @@
 
 body{
     display: flex;
+    height: 100vh;
     background-color: hsl(145, 36%, 45%);
     align-items: center;
     justify-content: center;
+    padding: 1rem;
+    font-family: "Montserrat", sans-serif;
+    color: hsl(210, 12%, 13%);
+}
+
+h1{
+    font-weight: 600;
+}
+
+#main>h1{
+    font-size: 1.7rem;
 }
 
 #main{
@@ -21,4 +33,39 @@ body{
     flex-direction: column;
     width: 70%;
     min-width: 500px;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+#balanceScreen{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, hsl(138, 22%, 66%), hsl(86, 40%, 44%));
+    border-radius: 1rem;
+    padding: 0.7rem 0 0.7rem 0;   /* top right bottom left*/
+    margin: 1rem 0 1rem 0;        /* top right bottom left*/
+}
+
+#balanceScreen h3{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#balance{
+    margin: 0.5rem;
+}
+
+#group{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#group>div{
+    width: 45%;
+    border-radius: 1rem;
+    padding: 0.5rem 4.5rem;
+    background-color: white;
 }

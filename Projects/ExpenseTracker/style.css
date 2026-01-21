@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--green);
+}
+
+:root{
+    --green:hsl(160, 81%, 31%);
+    --red:hsl(3, 74%, 49%);
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(145, 36%, 45%);
+    align-items: center;
+    justify-content: center;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    min-width: 500px;
+}

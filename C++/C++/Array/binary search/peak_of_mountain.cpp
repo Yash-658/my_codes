@@ -5,7 +5,7 @@ using namespace std;
 
 class Solution {
 public:
-    int peakIndexInMountainArray(vector<int>& arr) {     // hmesha peak ke liye (mid+1) check krna 
+    int peakIndexInMountainArray(vector<int>& arr) {     // IMPORTANT: hmesha peak ke liye (mid+1) check krna 
         int s=1, l=arr.size()-2;   
         while(s<l)
         {

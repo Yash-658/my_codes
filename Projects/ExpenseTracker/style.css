@@ -28,10 +28,11 @@ h1{
     display: flex;
     flex-direction: column;
     width: 80%;
+    max-width: 800px;
     min-width: 500px;
     height: 95%;
     min-height: 470px;
-    background-color: hsl(110, 50%, 98%);
+    background-color: hsl(110, 50%, 96%);
     border-radius: 1rem;
     padding: 1rem;
     text-align: center;
@@ -98,6 +99,7 @@ h1{
     width: 100%;
     height: 64%;
     text-align: left;
+    overflow: hidden;
 }
 
 #transactionBox h3{
@@ -117,11 +119,11 @@ h1{
 #transaction_list{
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 0.4rem;
     overflow: auto;
     scrollbar-width: thin;
-    scroll-behavior: smooth;
     scrollbar-color: hsl(210, 12%, 57%);
+    transition: all ease-out 0.2s; 
 }
 
 #transaction_list div{
@@ -130,17 +132,45 @@ h1{
     justify-content: space-between;
     background-color: white;
     padding: 1rem 2rem 1rem 0.7rem;
+    margin: 0 0.5rem 0 0;
     font-size: 0.7rem;
     font-weight: 550;
-    box-shadow: 3px 0px var(--green);
+    font-weight: 550;
+    transition: all ease 0.2s;
+    overflow:hidden;
 }
+
+/* #transaction_list div button {
+    display: none;
+    background-color: white;
+    color: var(--red);
+    padding: 2px 5px;
+    border: none;
+    margin: none;
+    font-weight: 600;
+} */
+
+/* #transaction_list div:hover button{
+    display: flex;
+    background-color: hsl(3, 74%, 95%);
+} */
 
 .increase{
     box-shadow: 3px 0px var(--green);
 }
 
+.increase:hover{
+    translate: 3px 0px;
+    box-shadow: 3px 0px var(--green), 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
 .decrease{
     box-shadow: 3px 0px var(--red);
+}
+
+.decrease:hover{
+    translate: 3px 0px;
+    box-shadow: 3px 0px var(--red), 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 #addTransactions{
@@ -171,7 +201,7 @@ h1{
     padding: 0.4rem;
     border: 1px solid hsl(228, 38%, 87%);
     border-radius: 0.3rem;
-    outline: none;          /* this removes the outline which appears when clicked inside the box */
+    outline-color: rgb(0, 0, 134);          /* this removes the outline which appears when clicked inside the box */
 }
 
 #addTransactions p{
@@ -179,7 +209,7 @@ h1{
     font-weight: 500;
 }
 
-button{
+#addTransactions button{
     background-color: hsl(145, 52%, 37%);
     padding: 0.5rem;
     color: white;
@@ -189,7 +219,7 @@ button{
     font-weight: 600;
 }
 
-button:hover{
+#addTransactions button:hover{
     background-color: hsl(145, 52%, 34%);
     cursor: pointer;
 }

@@ -22,6 +22,5 @@ int main()
         }
     }
 
-    return s;     // or l meri marzi
-    return -1;         
+    return s;     // or l meri marzi       
 }

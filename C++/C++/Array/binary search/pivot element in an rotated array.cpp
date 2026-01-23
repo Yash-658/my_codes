@@ -5,27 +5,23 @@ using namespace std;
 
 int main()
 {
-    vector<int> smpl = {5, 8, 10, 17, 1, 3, 4};
-    int mid, s = 0, l = (smpl.size()-1);
-    while(1)
+    vector<int> arr = {5, 8, 10, 17, 1, 3, 4};
+    int mid, s = 0, l = (arr.size()-1);
+    while(s < l)
     {
         mid = (s+l)/2;
-                                                                          
-        if (smpl[mid]<smpl[mid+1] && smpl[mid]<smpl[mid-1])          // pr ye wale case mai uhm {3,8,10,17,1} nhi aayega ye wale case mai as isme pivot element (i.e 1) corner mai hai ekdm
-        {                                                            // agr vo wala bhi nikalna hai toh video wali approach se code likh
-            cout<<mid;
-            break;
+
+        if(arr[0] >= arr[mid]) {
+            // first line pe hai
+            s = mid+1;
         }
 
-        else if (smpl[mid]>=smpl[0])
-        {
-            s = (mid+1);
+        else {
+            // ho skta hai pivot hi ho, toh apn mid-1 nhi krnge~
+            l = mid;
         }
-
-        else
-        { 
-            l = (mid-1);
-        }    
     }
-    return -1;         //if not pivoted
+
+    return s;     // or l meri marzi
+    return -1;         
 }

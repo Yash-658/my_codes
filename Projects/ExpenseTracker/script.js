@@ -18,9 +18,9 @@ function add() {
 
     let amount = parseFloat(amountEl.value);
     let description = descriptionEl.value;
-    console.log(amount);
+    
     // check input
-    if(amount === 0 || amount === NaN) {
+    if(amount === 0 || amountEl.value === "") {
         // won't work for 0
         return;
     }

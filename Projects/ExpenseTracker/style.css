@@ -1,15 +1,15 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-:root{
-    --green:hsl(160, 81%, 31%);
-    --red:hsl(3, 74%, 49%);
+:root {
+    --green: hsl(160, 81%, 31%);
+    --red: hsl(3, 74%, 49%);
 }
 
-body{
+body {
     display: flex;
     height: 100vh;
     background-color: hsl(145, 36%, 45%);
@@ -20,11 +20,11 @@ body{
     color: hsl(210, 12%, 17%);
 }
 
-h1{
+h1 {
     font-weight: 600;
 }
 
-#main{
+#main {
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -38,18 +38,18 @@ h1{
     text-align: center;
 }
 
-#heading_div{
+#heading_div {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 6%;
 }
 
-#heading{
+#heading {
     font-size: 1.5rem;
 }
 
-#balanceScreen{
+#balanceScreen {
     display: flex;
     height: 30%;
     min-height: 170px;
@@ -57,26 +57,28 @@ h1{
     justify-content: space-evenly;
     background-image: linear-gradient(to right, hsl(138, 22%, 66%), hsl(86, 40%, 44%));
     border-radius: 0.7rem;
-    padding: 0.7rem 0 0.7rem 0;   /* top right bottom left*/
-    margin: 1rem 0 1rem 0;        /* top right bottom left*/
+    padding: 0.7rem 0 0.7rem 0;
+    /* top right bottom left*/
+    margin: 1rem 0 1rem 0;
+    /* top right bottom left*/
 }
 
-#balanceScreen h3{
+#balanceScreen h3 {
     font-size: 0.9rem;
     font-weight: 500;
 }
 
-#balance{
+#balance {
     margin: 0.5rem;
 }
 
-#group{
+#group {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
-#group>div{
+#group>div {
     display: flex;
     flex-direction: column;
     width: 45%;
@@ -86,15 +88,15 @@ h1{
     gap: 0.2rem;
 }
 
-#incomeBox{
+#incomeBox {
     color: var(--green);
 }
 
-#expensesBox{
+#expensesBox {
     color: var(--red);
 }
 
-#transactionBox{
+#transactionBox {
     display: flex;
     width: 100%;
     height: 64%;
@@ -102,13 +104,13 @@ h1{
     overflow: hidden;
 }
 
-#transactionBox h3{
+#transactionBox h3 {
     font-size: 0.9rem;
     font-weight: 600;
     margin: 0.1rem 0 0.5rem 0;
 }
 
-#transactions{
+#transactions {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -116,17 +118,17 @@ h1{
     padding: 0.7rem;
 }
 
-#transaction_list{
+#transaction_list {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: hsl(210, 12%, 57%);
-    transition: all ease-out 0.2s; 
+    transition: all ease-out 0.2s;
 }
 
-#transaction_list div{
+#transaction_list div {
     display: flex;
     border-radius: 0.3rem;
     justify-content: space-between;
@@ -137,7 +139,7 @@ h1{
     font-weight: 550;
     font-weight: 550;
     transition: all ease 0.2s;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 /* #transaction_list div button {
@@ -155,25 +157,25 @@ h1{
     background-color: hsl(3, 74%, 95%);
 } */
 
-.increase{
+.increase {
     box-shadow: 3px 0px var(--green);
 }
 
-.increase:hover{
+.increase:hover {
     translate: 3px 0px;
     box-shadow: 3px 0px var(--green), 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-.decrease{
+.decrease {
     box-shadow: 3px 0px var(--red);
 }
 
-.decrease:hover{
+.decrease:hover {
     translate: 3px 0px;
     box-shadow: 3px 0px var(--red), 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-#addTransactions{
+#addTransactions {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -184,32 +186,33 @@ h1{
     justify-content: space-between;
 }
 
-#addTransactions div{
+#addTransactions div {
     display: flex;
     flex-direction: column;
 }
 
-#addTransactions label{
+#addTransactions label {
     font-size: 0.7rem;
     font-weight: 550;
     margin: 0.2rem 0 0.3rem 0;
 }
 
-#addTransactions input{
+#addTransactions input {
     font-size: 0.7rem;
     margin: 0 0 0.3rem 0;
     padding: 0.4rem;
     border: 1px solid hsl(228, 38%, 87%);
     border-radius: 0.3rem;
-    outline-color: rgb(0, 0, 134);          /* this removes the outline which appears when clicked inside the box */
+    outline-color: rgb(0, 0, 134);
+    /* this removes the outline which appears when clicked inside the box */
 }
 
-#addTransactions p{
+#addTransactions p {
     font-size: 0.6rem;
     font-weight: 500;
 }
 
-#addTransactions button{
+#addTransactions button {
     background-color: hsl(145, 52%, 37%);
     padding: 0.5rem;
     color: white;
@@ -219,7 +222,7 @@ h1{
     font-weight: 600;
 }
 
-#addTransactions button:hover{
+#addTransactions button:hover {
     background-color: hsl(145, 52%, 34%);
     cursor: pointer;
 }

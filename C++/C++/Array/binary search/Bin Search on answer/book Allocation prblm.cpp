@@ -31,7 +31,7 @@
 
 // long long ayushGivesNinjatest(int n, int m, vector<int> time) 
 // {	
-// 	long long mid, s = 1, e = accumulate(time.begin(), time.end(), 0LL);
+// 	long long mid, s = *max_element(time.begin(), time.end()), e = accumulate(time.begin(), time.end(), 0LL);
 
 // 	while(s < e) {
 // 		mid = (s+e)/2;

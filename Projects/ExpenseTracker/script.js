@@ -54,8 +54,14 @@ function createDialog(description, amount) {
     const p1 = document.createElement("p");
     const p2 = document.createElement("p");
 
-    p1.textContent = description;
-    p2.textContent = `$${amount.toFixed(2)}`;
+    newDialog.innerHTML = `
+    <span>${description}</span>
+    <span>
+  
+    ${amount.toFixed(2)}
+    <button class="delete-btn" onclick="">x</button>
+    </span>
+  `;
     
     if(amount > 0) {
         newDialog.classList.add('increase');
@@ -65,7 +71,5 @@ function createDialog(description, amount) {
         newDialog.classList.add('decrease');
     }
 
-    newDialog.append(p1);
-    newDialog.append(p2);
     document.getElementById('transaction_list').append(newDialog);
 }

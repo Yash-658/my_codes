@@ -132,6 +132,7 @@ h1 {
     display: flex;
     border-radius: 0.3rem;
     justify-content: space-between;
+    align-content: center;
     background-color: white;
     padding: 1rem 2rem 1rem 0.7rem;
     margin: 0 0.5rem 0 0;
@@ -139,22 +140,43 @@ h1 {
     font-weight: 550;
     font-weight: 550;
     transition: all ease 0.2s;
+    animation: stepIn 0.3s ease;
 }
 
-/* #transaction_list div button {
-    display: none;
-    background-color: white;
-    color: var(--red);
-    padding: 2px 5px;
-    border: none;
-    margin: none;
-    font-weight: 600;
-} */
+@keyframes stepIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
 
-/* #transaction_list div:hover button{
-    display: flex;
-    background-color: hsl(3, 74%, 95%);
-} */
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+#transaction_list div:hover .delete-btn{
+    opacity: 1;
+}
+
+.delete-btn {
+    background: none;
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: all 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-left: 12px;
+} 
+
+.delete-btn:hover {
+    background-color: #fee2e2;
+    transform: scale(1.1);
+}
+
 
 .increase {
     box-shadow: 3px 0px var(--green);

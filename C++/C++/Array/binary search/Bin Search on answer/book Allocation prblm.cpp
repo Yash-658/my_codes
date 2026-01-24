@@ -1,5 +1,7 @@
 // https://www.naukri.com/code360/problems/ayush-and-ninja-test_1097574?source=youtube&campaign=love_babbar_codestudio2&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_codestudio2&leftPanelTabValue=SUBMISSION
 
+// TC: O(m * log(sum(time)))
+
 #include<vector>
 #include<utility>
 #include <bits/stdc++.h> 
@@ -31,7 +33,7 @@
 
 // long long ayushGivesNinjatest(int n, int m, vector<int> time) 
 // {	
-// 	long long mid, s = *max_element(time.begin(), time.end()), e = accumulate(time.begin(), time.end(), 0LL);
+// 	long long mid, s = *max_element(time.begin(), time.end()), e = accumulate(time.begin(), time.end(), 0LL);    // max_element iterator return krta hai and usko dereference krne ke liye * lgate hai
 
 // 	while(s < e) {
 // 		mid = (s+e)/2;

@@ -1,0 +1,5 @@
+“allocate minimum maximum workload” / binary search on answer problems~
+
+Isme apn phele answer ki range dhundhte hai, 
+phir us range pe binary search lgake dekhte hai if a solution is possible, 
+agr miljata hai toh question ke according search space aur choti krte jaate hai 

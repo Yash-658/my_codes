@@ -8,10 +8,8 @@
 
 // this note is for search in rotated sorted array part 2
 
-// If we cannot determine which side is sorted (the else block), 
-// we must search both the left and right sub-arrays. 
-// While this technically degrades performance in the worst case, 
-// it correctly handles the ambiguity caused by duplicates.
+// If we cannot determine which side is sorted due to arr[s] == arr[mid] (the else block), 
+// we can just decrease the search space by incremanting s as it won't be the target anyways as we already would have checked if arr[mid] == target
 
 #include<vector>
 using namespace std;

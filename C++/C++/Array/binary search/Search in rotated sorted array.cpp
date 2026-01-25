@@ -1,10 +1,15 @@
 // https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+
+// In a rotated sorted array, the entire array is no longer fully sorted ,
+// but an important property still holds: in every part of the array you look at, one side will always be sorted. 
+// This means either the left portion or the right portion of the array will be in increasing order. 
+// That’s the key idea we use to find the target efficiently.
+
 #include<vector>
 using namespace std;
 
 class Solution {
 public:
-// key point: when we choose any index in a rotated array, there's one side which is sorted and one side which isn't(this side also contains the pivot element, so we need to decrease the search space according to this)
     int search(vector<int>& arr, int target) {
         int mid, s = 0, l = arr.size()-1;
         

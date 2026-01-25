@@ -5,6 +5,14 @@
 // This means either the left portion or the right portion of the array will be in increasing order. 
 // That’s the key idea we use to find the target efficiently.
 
+
+// this note is for search in rotated sorted array part 2
+
+// If we cannot determine which side is sorted (the else block), 
+// we must search both the left and right sub-arrays. 
+// While this technically degrades performance in the worst case, 
+// it correctly handles the ambiguity caused by duplicates.
+
 #include<vector>
 using namespace std;
 

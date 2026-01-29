@@ -133,6 +133,7 @@ h1 {
     border-radius: 0.3rem;
     justify-content: space-between;
     align-content: center;
+    align-items: center;
     background-color: white;
     padding: 1rem 2rem 1rem 0.7rem;
     margin: 0 0.5rem 0 0;
@@ -141,7 +142,9 @@ h1 {
     font-weight: 550;
     transition: all ease 0.2s;
     animation: stepIn 0.3s ease;
+    text-align: center;
 }
+
 
 @keyframes stepIn {
     from {

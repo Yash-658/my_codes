@@ -102,7 +102,5 @@ function removeTransaction(id) {
   updateSummary();
 }
 
-// initial render
-updateTransactionList();
-updateSummary();
+
 

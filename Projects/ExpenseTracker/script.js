@@ -27,7 +27,7 @@ function add() {
     }
 
     transactions.push({
-        id: Date.now,
+        id: Date.now(),
         description: description,
         amount: amount
     });
@@ -64,12 +64,11 @@ function createElement(transaction) {
     newDialog.innerHTML = `
     <span>${description}</span>
     <span>
-  
-    ${amount.toFixed(2)}
-    <button class="delete-btn" onclick="removeElem('${transaction.id}')">x</button>
+    $${Math.abs(amount).toFixed(2)}
+    <button class="delete-btn" onclick="removeElem(${transaction.id})">x</button>
     </span>`;
     
-    newDialog.classList.add(amount > 0 ? "income" : "decrease");
+    newDialog.classList.add(amount > 0 ? "increase" : "decrease");
 
     return newDialog;
 }
@@ -92,9 +91,9 @@ function updateSummary() {
   expensesEl.textContent = expenses.toFixed(2);
 }
 
-function removeTransaction(id) {
+function removeElem(id) {
   // filter out the one we wanted to delete
-  transactions = transactions.filter((transaction) => transaction.id !== id);
+  transactions = transactions.filter((transaction) => transaction.id !== Number(id));
 
   localStorage.setItem("transactions", JSON.stringify(transactions));
 
@@ -102,5 +101,6 @@ function removeTransaction(id) {
   updateSummary();
 }
 
-
-
+// initial render, zruri hai so that when we refresh UI same dikhe
+updateTransactionList();
+updateSummary();

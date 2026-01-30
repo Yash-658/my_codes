@@ -85,6 +85,7 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
 //             }
 
 //             else {
+//                 // mathematically there's no case where both (l1 > r2) && (l2 > r1)
 //                 // symmetry found!
 //                 if((n+m)%2 == 0) {
 //                     return (max(l1, l2) + min(r1, r2))/2.0;

@@ -36,3 +36,66 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
 
 // MOST OPTIMAL APPROACH~ 
 
+// class Solution {
+// public:
+//     // for odd, we will consider n+m+1/2 elements for symmetery~ (so max(l1, l2) will be the median)
+
+//     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+//         int n = nums1.size();
+//         int m = nums2.size();
+
+//         if(n > m) return findMedianSortedArrays(nums2, nums1);  
+
+//         if(n == 0) {
+//             // if m is odd
+//             if(m%2) {
+//                 return nums2[m/2];
+//             }
+
+//             else{
+//                 return (nums2[m/2] + nums2[(m/2)-1])/2.0;
+//             }
+//         }
+
+//         int symmetry = (n + m + 1) / 2;    // this handles for both odd and even cases~
+//         int mid1, mid2, s = 0, e = n;
+
+//         while(s <= e) {
+//             mid1 = (s+e)/2;          // mid1: number of elements we will take from nums1 on the left side
+//             mid2 = symmetry - mid1;   // mid2: number of elements we will take from nums2 on the right side
+
+//             // if(mid1 > symmetry)  don't have to check for this as symmetry >= n (guaranteed because n ≤ m)
+
+//             // check if taking 'mid' elements from nums1 results into valid symmetry~
+//             int l1, l2, r1, r2;
+
+//             // assigning values of l1,l2,r1,r2 while taking in consideration of boundry cases~
+//             l1 = (mid1 == 0) ? INT_MIN : nums1[mid1-1];
+//             l2 = (mid2 == 0) ? INT_MIN : nums2[mid2-1];
+//             r1 = (mid1 == n) ? INT_MAX : nums1[mid1];
+//             r2 = (mid2 == m) ? INT_MAX : nums2[mid2];
+
+//             // case1: l1 < r2
+//             if( l1 > r2 ) {
+//                 e = mid1-1;
+//             }
+
+//             else if( l2 > r1 ) {
+//                 s = mid1 + 1;
+//             }
+
+//             else {
+//                 // symmetry found!
+//                 if((n+m)%2 == 0) {
+//                     return (max(l1, l2) + min(r1, r2))/2.0;
+//                 }
+
+//                 else {
+//                     return (max(l1, l2));
+//                 }
+//             }
+//         }
+
+//         return -1; // unreachable
+//     }
+// };

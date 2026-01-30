@@ -1,10 +1,3 @@
-/*
-
-isko local storage mai save rkhne ke liye update kro, watch full project video https://youtu.be/kAiX0itnonM?si=FvZS92LIZDTuF25E&t=7618
-this doesn't handle amount = 0 well rn~
-
-*/
-
 const descriptionEl = document.getElementById("description");
 const amountEl = document.getElementById("amount");
 

@@ -19,6 +19,11 @@ function add() {
         return;
     }
 
+    if(description === "") {
+      alert("Please provide a description!");
+      return;
+    }
+
     transactions.push({
         id: Date.now(),
         description: description,

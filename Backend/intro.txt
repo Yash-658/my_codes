@@ -5,7 +5,7 @@ Directory structure:
 -> DB : contains actual code to connect to database
 -> Models : contains the data schema / format on how its going to be stored in database
 -> Controllers : functionalities (contains functions)
--> Routes : when to call which functions 
+-> Routes : when to call which functions and what to do after what
 -> Middlewares
 -> Utils : common functionalities that are used, ex: mail sending, otp sending, file upload
 -> More (depends)

@@ -34,7 +34,7 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
     }
 */
 
-// MOST OPTIMAL APPROACH~ 
+// MOST OPTIMAL APPROACH~  O(log(min(a,b)))
 
 // class Solution {
 // public:

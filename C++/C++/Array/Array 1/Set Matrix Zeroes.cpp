@@ -1,4 +1,6 @@
-// TC: O(mn) SC: O(m+n)
+// TC: O(mn) SC: O(m+n) 
+// This is better approach than just zeroing every row and col when you see a zero, 
+// cuz SC would be O(mn) cuz we will have to make a copy of current matrix in that solution~ (if done inplace it would lead to cascading zeroes)
 
 // class Solution {
 // public:

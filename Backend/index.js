@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 
-app.get('/', (req, res) => {
+app.get('/', (req, res) => {     // get method: “When a GET request comes to this URL, run this function and send a response.”
   res.send('Hello World!')
 })
 

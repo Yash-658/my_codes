@@ -1,0 +1,2 @@
+// first discuss brute force, i.e will generate all possible permutations in sorted order, then will do linear search to find the current permutation and will return the next permutation~
+// TC of brute-force: O(n!*n)

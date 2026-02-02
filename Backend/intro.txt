@@ -10,4 +10,4 @@ Directory structure:
 -> Utils : common functionalities that are used, ex: mail sending, otp sending, file upload
 -> More (depends)
 
-Continue from here~ https://youtu.be/7fjOw8ApZ1I?si=qG1f9N32du1OC8oR&t=1764
+Continue from here~ https://youtu.be/7fjOw8ApZ1I?si=55g1DKXMytUUmvCU&t=9346

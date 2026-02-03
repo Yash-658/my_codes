@@ -11,3 +11,5 @@ Directory structure:
 -> More (depends)
 
 Continue from here~ https://youtu.be/7fjOw8ApZ1I?si=55g1DKXMytUUmvCU&t=9346
+
+-> DATA MODELLING WITH MONGOOSE~ https://stackblitz.com/edit/stackblitz-starters-ndchlu2k?file=index.js

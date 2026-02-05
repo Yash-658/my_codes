@@ -1,5 +1,6 @@
 // most opitmal approach uses tortoise and hare method, 
 // treat the array as a linked list with cycle and just detect the starting point of the cycle by floyd's cycle detection, that's our duplicate~
+// linked list wale topic mai iska derivation ache se krna~
 
 // TC: O(n) SC: O(1)
 

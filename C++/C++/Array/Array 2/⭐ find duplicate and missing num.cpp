@@ -1,6 +1,6 @@
 // https://takeuforward.org/plus/dsa/problems/find-the-duplicate-number
 // TC: O(n) SC: O(1)
-// this is the maths solution, there's a XOR solution too~ https://youtu.be/2D0D8HE6uak?si=ywfExrdPbBJwA2CX&t=1202
+// this is the maths solution, there's a XOR solution too~ https://youtu.be/2D0D8HE6uak?si=ywfExrdPbBJwA2CX&t=1202, try to implemenent it too, its easy
 
 // class Solution {
 // public:

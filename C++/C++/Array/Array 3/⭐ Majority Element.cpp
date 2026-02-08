@@ -5,6 +5,11 @@
 
 // Approch3: Moore's Voting Algo~ O(n) O(1)
 
+// Moore’s Voting Algorithm works by pairwise cancellation: different elements cancel each other’s votes.
+// Since the majority element appears more than ⌊n/2⌋ times, it cannot be fully canceled by all other elements combined regardless the order.
+// Therefore, after all cancellations, the remaining candidate must be the majority element.
+
+
 // class Solution {
 // public:
 //     int majorityElement(vector<int>& nums) {

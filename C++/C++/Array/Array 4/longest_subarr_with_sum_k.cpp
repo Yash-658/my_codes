@@ -1,4 +1,6 @@
-// fix it~ https://www.naukri.com/code360/problems/longest-subarray-with-sum-k_10870953
+// https://www.naukri.com/code360/problems/longest-subarray-with-sum-k_10870953
+
+// IT WON"T WORK: you tried it with sliding window but it won't work with -ve numbers, so use prefix sum method~
 
 // #include <bits/stdc++.h> 
 // int getLongestSubarray(vector<int>& nums, int k){
@@ -49,3 +51,5 @@
 
 //     return ans;
 // }
+
+// OPTIMAL AND CORRECT METHOD TO USE AS -VE NUMBERS ARE ALSO INVOLVED~

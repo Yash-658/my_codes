@@ -1,55 +1,32 @@
 // https://www.naukri.com/code360/problems/longest-subarray-with-sum-k_10870953
 
-// IT WON"T WORK: you tried it with sliding window but it won't work with -ve numbers, so use prefix sum method~
+// IT WONT WORK: you tried it with two pointers but it will only work if +ve numbers were there, so use prefix sum method~
+
+// OPTIMAL AND CORRECT METHOD TO USE AS -VE NUMBERS ARE ALSO INVOLVED~ (PREFIX SUM)
+
+// TC: O(n) SC: O(n)
 
 // #include <bits/stdc++.h> 
 // int getLongestSubarray(vector<int>& nums, int k){
-//     // first make a hash vector which will tell if there exists a -ve number "ahead" in the arr~ (doesn't tell about the curr element~)
-//     int n = nums.size();
+//     unordered_map<int, int> prefixSum;
+//     int ans = 0, sum = 0;
 
-//     vector<bool> hash(nums.size(), false);
-    
-//     for(int i = n-2; i >= 0; i--) {
-//         if(nums[i+1] < 0 || hash[i+1] == true) hash[i] = true;
-//     }
+//     for(int i = 0; i < nums.size(); i++) {
+//         sum += nums[i];
 
+//         // check if this prefix sum == k
+//         if(sum == k) ans = max(ans, i+1);
 
-//     int ans = 0, sum = 0, low = 0, high = 0;
-
-//     while(low <= high && low < n && high < n) {
-//         sum += nums[high];
-
-//         if(sum == k) {
-//             int length = high-low+1;
-//             ans = max(ans, length);
-
-//             if(hash[high] == true) {
-//                 high++;
-//             }
-
-//             else{
-//                 sum -= nums[low];
-//                 low++;
-//             }
+//         // check if there exists a prefix sum = sum-k
+//         if(prefixSum.find(sum-k) != prefixSum.end()) {
+//             ans = max(ans, i - prefixSum[sum-k]);
 //         }
 
-//         else if(sum < k) {
-//             high++;
-//         }
-
-//         else{
-//             if(hash[high] == true) {
-//                 high++;
-//             }
-
-//             else{
-//                 sum -= nums[low];
-//                 low++;
-//             }
+//         // now store the prefix sum, but first check if there already exists a same prefixSum~
+//         if(prefixSum.find(sum) == prefixSum.end()) {           // understand how we handled duplicate prefixSum
+//             prefixSum[sum] = i;
 //         }
 //     }
 
 //     return ans;
 // }
-
-// OPTIMAL AND CORRECT METHOD TO USE AS -VE NUMBERS ARE ALSO INVOLVED~

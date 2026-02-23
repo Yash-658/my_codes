@@ -24,7 +24,7 @@
 
 //         // now store the prefix sum, but first check if there already exists a same prefixSum~
 //         if(prefixSum.find(sum) == prefixSum.end()) {           // understand how we handled duplicate prefixSum
-//             prefixSum[sum] = i;
+//             prefixSum[sum] = i;                                // we are only storing the first occurance of the prefixSum
 //         }
 //     }
 

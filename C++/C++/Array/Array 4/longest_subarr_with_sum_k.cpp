@@ -1,8 +1,9 @@
 // https://www.naukri.com/code360/problems/longest-subarray-with-sum-k_10870953
 
-// IT WONT WORK: you tried it with two pointers but it will only work if +ve numbers were there, so use prefix sum method~
+// you tried it with two pointers but it will only work if non-negative numbers were there, so use prefix sum method here~
 
 // OPTIMAL AND CORRECT METHOD TO USE AS -VE NUMBERS ARE ALSO INVOLVED~ (PREFIX SUM)
+// JB BHI LONGEST SUBARRAYS, ya subarr count krni ho with sum,xor k, we use prefix methods~
 
 // TC: O(n) SC: O(n)
 

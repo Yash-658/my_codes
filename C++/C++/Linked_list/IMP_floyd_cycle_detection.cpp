@@ -32,7 +32,12 @@ bool floydCycleDetection(Node *head) {
 }
 
 // it will return NULL if loop doesn't exist and if it exists, it will return the starting node of the loop~
-// why this works? proof~ https://youtu.be/VxOFflTXlXo?si=hjD07XG0FSAf3IRG&t=1530
+// why this works? proof~ https://youtu.be/VxOFflTXlXo?si=hjD07XG0FSAf3IRG&t=1530          
+
+// https://youtu.be/VxOFflTXlXo?si=_dL5Q90Go3_9tYFD&t=2021 here I know now that to complete cycle from the intersection point, 
+// I have to travel "A" distance more, its not required that this will complete the cycle only once,
+//  its possible that I complete the cycle twice when I travel "A" distance from the point of intersection
+
 Node *getStartingNode(Node *head) {
     Node* slow = head;
     Node* fast = head;

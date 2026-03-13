@@ -1,4 +1,4 @@
-// This is the iterative approach, O(N*M) O(1)
+// This is Sequential merging, O(K * N) O(1)    >> here K = total no. of nodes~
 
 // Node* mergeLL(Node* first, Node* second) {
 // 	Node* dummy = new Node(-1), *temp = dummy;
@@ -50,3 +50,6 @@
 
 // 	return head;
 // }
+
+
+// Divide & conquer (like merge sort, merging in pairs) O(K log N)

@@ -1,0 +1,29 @@
+WHEN GREEDY WORKS:
+
+it works when~
+
+1) I can take a choice now that won't hurt me later
+2) local optimal choices lead to global optimal
+
+When solving:
+
+First think greedy
+Try to justify it
+If stuck → switch to DP
+
+CUSTOM COMPARATOR LOGIC:
+
+For:
+priority_queue<T, vector<T>, comp>
+
+👉 comp(a, b) = true means:
+
+“a should come after b” (a has lower priority)
+
+FOR MIN-HEAP: 
+
+return a.first > b.first;
+Means:
+a is “worse” if it is larger
+👉 So smaller value gets priority
+✔ Top = smallest element

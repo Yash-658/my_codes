@@ -1,0 +1,1 @@
+// it can be done by greedy only if its guranteed standard coin systems like USA, INDIA as they have 1 unit currency everytime so locally optimal choice can lead to global optimum~

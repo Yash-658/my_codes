@@ -4,7 +4,7 @@
 #include<vector>
 using namespace std;
 
-// By recursion, for every index there are two options, either include it or exclude it~ O(2^n) O(2^n)
+// By recursion, for every index there are two options, either include it or exclude it~ O(n*2^n) O(2^n)
 
 class Solution {
 public:
@@ -32,4 +32,26 @@ public:
     }
 };
 
-// By bit manipulation
+// By bit manipulation   O(2^n) O(2^n)
+class Solution {
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+        int n = nums.size();
+        vector<vector<int>> ans;
+
+        for(int mask = 0; mask < (1 << n); mask++) {
+            vector<int> subset;
+
+            for(int j = 0; j < n; j++) {
+                // check if j-th bit of mask is set (1) → include nums[j]
+                if(mask & (1 << j)) {
+                    subset.push_back(nums[j]);
+                }
+            }
+
+            ans.push_back(subset);
+        }
+
+        return ans;
+    }
+};

@@ -4,7 +4,7 @@
 #include<vector>
 using namespace std;
 
-// By recursion 
+// By recursion, for every index there are two options, either include it or exclude it~ O(2^n) O(2^n)
 
 class Solution {
 public:

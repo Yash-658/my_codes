@@ -32,7 +32,7 @@ public:
     }
 };
 
-// By bit manipulation   O(2^n) O(2^n)
+// ⭐⭐⭐ By bit manipulation   O(2^n) O(2^n)
 class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {

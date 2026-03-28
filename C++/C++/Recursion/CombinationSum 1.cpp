@@ -1,6 +1,7 @@
 // https://leetcode.com/problems/combination-sum/
 
 // quickies: how did I used ind parameter to remove duplicate subsets?
+//           why sorting? Ans: so I can prune recursion early 
 
 // class Solution {
 // public:

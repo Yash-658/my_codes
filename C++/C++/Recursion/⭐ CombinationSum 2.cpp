@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/combination-sum-ii/
 
+// ⭐ subset generation with constraints problem.
+
 // TC: O(2^n) SC: O(n)
 
 // class Solution {

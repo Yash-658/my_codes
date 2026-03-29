@@ -17,7 +17,7 @@
 //     }
 
 //     string getPermutation(int n, int k) {
-//         k = k-1;
+//         k = k-1;                // so permutation becomes 0 based indexing~
         
 //         string ans;
 //         for(char i = 1; i <= n; i++) ans.push_back(i + '0');

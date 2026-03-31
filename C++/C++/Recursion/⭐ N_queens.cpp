@@ -1,8 +1,10 @@
+// FOR LEETCODE ONE - https://leetcode.com/problems/n-queens/submissions/1965164484/
+
 // TC: O(N!)  SC: O(n*n)
 
 // #include <bits/stdc++.h> 
 
-// // optimisation
+// // optimisation   (use hash vectors formore efficiency)
 // unordered_map<int, bool> rowCheck;
 // unordered_map<int, bool> up_D_Check;
 // unordered_map<int, bool> low_D_Check;

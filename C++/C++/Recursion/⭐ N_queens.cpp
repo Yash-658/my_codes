@@ -1,6 +1,7 @@
 // FOR LEETCODE ONE - https://leetcode.com/problems/n-queens/submissions/1965164484/
 
 // TC: O(N! * n^2)  SC: O(n*n)     (extra n² came by copying the board into ans)
+// 👉 “Why not O(n^n)?” “Because we never reuse rows, so it’s permutations, not combinations with repetition.”
 
 // class Solution {
 // public:

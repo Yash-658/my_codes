@@ -1,6 +1,66 @@
 // FOR LEETCODE ONE - https://leetcode.com/problems/n-queens/submissions/1965164484/
 
-// TC: O(N!)  SC: O(n*n)
+// TC: O(N! * n^2)  SC: O(n*n)     (extra n² came by copying the board into ans)
+
+// class Solution {
+// public:
+//     bool isSafe(int row, int col, vector<bool> &rows, unordered_map<int,bool> &downDiag,  unordered_map<int,bool> &upDiag) {
+//         if(rows[row] || downDiag[row-col] || upDiag[row+col]) { // if for map that value doesn't exist, it will initialise it with false~
+//             return false;
+//         }
+
+//         else return true;
+//     }
+
+//     void solve(int col, int n, vector<bool> &rows, unordered_map<int,bool> &downDiag,  unordered_map<int,bool> &upDiag, vector<vector<string>> &ans, vector<string> &board) 
+//     {
+//         // base case
+//         if(col == n) {
+//             // store this arrangement in ans~
+//             ans.push_back(board);
+//             return;
+//         }
+
+//         for(int row = 0; row < n; row++) {
+//             if(isSafe(row, col, rows, downDiag, upDiag)) {
+//                 // state update~
+//                 board[row][col] = 'Q';
+//                 rows[row] = true; 
+//                 downDiag[row-col] = true;
+//                 upDiag[row+col] = true;
+
+//                 solve(col+1, n, rows, downDiag, upDiag, ans, board);
+
+//                 // state update~
+//                 board[row][col] = '.';
+//                 rows[row] = false; 
+//                 downDiag[row-col] = false;
+//                 upDiag[row+col] = false;
+//             }
+//         }
+//     }
+
+//     vector<vector<string>> solveNQueens(int n) {
+//         vector<vector<string>> ans;
+//         vector<string> board(n, string(n, '.'));
+
+//         vector<bool> rows(n, false);
+//         unordered_map<int,bool> downDiag;
+//         unordered_map<int,bool> upDiag;
+
+//         solve(0, n, rows, downDiag, upDiag, ans, board);
+//         return ans;
+//     }
+// };
+
+
+
+
+
+
+
+
+// love babr solution
 
 // #include <bits/stdc++.h> 
 

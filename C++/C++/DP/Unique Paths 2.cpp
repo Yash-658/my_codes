@@ -38,3 +38,67 @@
 //         return solve(0, 0, m, n, ans, obstacleGrid);
 //     }
 // };
+
+// TABULATION (BOTTOM-UP APPROACH) TC: O(m*n)  SC: O(m*n)  BUT NO RECURSION SPACE AS ITS AN ITERATIVE APPROACH~(SPACE IS CUZ WE USED 2D DP, CAN OPTIMISE IT MORE USING 1D DP)
+
+// tabulation~
+    // int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+    //     int rows = obstacleGrid.size(), cols = obstacleGrid[0].size();
+    //     vector<vector<int>> ans(rows, vector<int>(cols, 0));
+        
+    //     if(obstacleGrid[0][0] == 1 || obstacleGrid[rows-1][cols-1] == 1) return 0;
+
+    //     ans[0][0] = 1;  // as we can reach source in one way~
+
+    //     for(int row = 0; row < rows; row++) {
+    //         for(int col = 0; col < cols; col++) {
+    //             if(row == 0 && col == 0) continue;
+    //             if(obstacleGrid[row][col] == 1) {
+    //                 // this means its an obstacle, 0 ways to reach here~
+    //                 continue;
+    //             }
+
+    //             int up = 0, left = 0;
+
+    //             if(row > 0) up = ans[row-1][col];
+    //             if(col > 0) left = ans[row][col-1];
+
+    //             ans[row][col] = up + left;
+    //         }
+    //     }
+
+    //     return ans[rows-1][cols-1];
+    // }
+
+
+//     Tabulation TC: O(mn) SC: O(n) (SPACE OPTIMISED 1D DP)~
+//     
+//     int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid) {
+//         int rows = obstacleGrid.size(), cols = obstacleGrid[0].size();
+//         vector<int> ans(cols, 0);
+
+//         if(obstacleGrid[0][0] == 1 || obstacleGrid[rows-1][cols-1] == 1) return 0;
+
+//         ans[0] = 1;  // as we can reach source in one way~
+
+//         for(int row = 0; row < rows; row++) {
+//             for(int col = 0; col < cols; col++) {
+//                 if(row == 0 && col == 0) continue;
+//                 if(obstacleGrid[row][col] == 1) {
+//                     // this means its an obstacle, 0 ways to reach here~
+//                     ans[col] = 0;
+//                     continue;
+//                 }
+
+//                 int up = 0, left = 0;
+
+//                 if(row > 0) up = ans[col];
+//                 if(col > 0) left = ans[col-1];
+
+//                 ans[col] = up + left;
+//             }
+//         }
+
+//         return ans[cols-1];
+//     }
+// };

@@ -45,7 +45,7 @@
 // };
 
 
-//    ⭐⭐⭐ Memoization with max word optimization 👉 O(n × L²)
+//    ⭐ Memoization with max word optimization 👉 O(n × L²)
 //     where L = max word length
 
 // class Solution {
@@ -82,5 +82,39 @@
 //         }
 
 //         return isPossible(0, s, maxLength, ans, dict);
+//     }
+// };
+
+// ⭐ Tabulation with optimization, understand it clearly how we did it~
+
+// class Solution {
+// public:
+
+//     bool wordBreak(string s, vector<string>& wordDict) {
+//         int n = s.size();
+//         unordered_set<string> dict;
+
+//         int maxLength = 0;
+
+//         for(const string &str: wordDict) {
+//             maxLength = max(maxLength, (int)str.size());
+//             dict.insert(str);
+//         }
+
+//         vector<bool> dp(n+1, false);     // ans[i] will represent if we can partition it from 0 -> i-1 successfully, ans[0] is always true as empty string~ 
+
+//         dp[0] = true;
+
+//         for(int i = 1; i <= n; i++) {
+//             for(int j = max(0, i - maxLength); j < i; j++) {
+
+//                 if(dp[j] && dict.contains(s.substr(j, i-j))) {
+//                     dp[i] = true;
+//                     break;
+//                 }
+//             }
+//         }
+
+//         return dp[n];
 //     }
 // };

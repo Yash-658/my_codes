@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/coin-change/
 
-// TC: O(amount*n) SC: O(amount)  n = types of coin~
+// MEMOIZATION TC: O(amount*n) SC: O(amount)  n = types of coin~
 
 // class Solution {
 // public:
@@ -28,5 +28,31 @@
 //         vector<int> dp(amount+1, -1);
 //         int ans = solve(amount, dp, coins);
 //         return (ans != INT_MAX ? ans : -1);
+//     }
+// };
+
+// ⭐ Tabulation~ TC: O(amount*n) SC: O(amount)
+// here dp[i] tells min num of coins to reach 'i' amount~
+// here we removed recursion stack space O(amount), rest TC and SC are same as in memoization~
+
+// class Solution {
+// public:
+//     int coinChange(vector<int>& coins, int amount) {
+//         vector<int> dp(amount+1, 0);
+
+//         for(int i = 1; i <= amount; i++) {     // starting from 1 as dp[0] will always be 0~
+//             int minCoins = INT_MAX;
+
+//             for(int coin: coins) {
+//                 if(i - coin >= 0) minCoins = min(minCoins, dp[i-coin]);
+//                 // to deal with 1 + INT_MAX case we aren't adding + 1 coin rn~
+//             }
+
+//             if(minCoins != INT_MAX) minCoins++;
+
+//             dp[i] = minCoins;
+//         }
+
+//         return (dp[amount] != INT_MAX ? dp[amount] : -1);
 //     }
 // };

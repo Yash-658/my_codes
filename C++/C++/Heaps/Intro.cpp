@@ -109,13 +109,13 @@ class maxHeap {
 // The total work balances out to linear time
 
     void heapFromArray(int a[], int n) {     // O(n) mai ye array se heap bna deta hai~  (how? heapify down agr logn time leta hai and ye approx n elements ke liye chlega toh O(nlogn) hona tha na?)
-        size = n;
+        size = n;                            // note: a[] is a 1-based indexing array~
         for (int i = 1; i <= size; i++)
         {
             arr[i] = a[i];
         }
 
-        for(int i = n/2; i >= 1; i--) 
+        for(int i = n/2; i >= 1; i--)        // heapifying down all the nodes starting from the last non-leaf node~
         {
             heapifyDown(arr, size, i);
         }

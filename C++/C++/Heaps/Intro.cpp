@@ -37,7 +37,7 @@ class maxHeap {
     }
 
     void insert(int a) {
-        if (size >= 100) {
+        if (size >= 99) {
             cout << "Heap overflow!\n";
             return;
         }
@@ -108,6 +108,10 @@ class maxHeap {
 // Shallower nodes (fewer) require more work
 // The total work balances out to linear time
 
+// You're doing expensive work (log n) on very few nodes,
+// and cheap work on many nodes.
+// So average cost per node is constant, not log n.
+
     void heapFromArray(int a[], int n) {     // O(n) mai ye array se heap bna deta hai~  (how? heapify down agr logn time leta hai and ye approx n elements ke liye chlega toh O(nlogn) hona tha na?)
         size = n;                            // note: a[] is a 1-based indexing array~
         for (int i = 1; i <= size; i++)
@@ -136,7 +140,7 @@ class maxHeap {
 
 
 void heapifyDown(int arr[], int size, int i) {             // o(logn) mai sahi jgah pe phocha deti hai~
-    int left = 2 * i;
+    int left = 2 * i; 
     int right = 2 * i + 1;
     int largest = i;
 

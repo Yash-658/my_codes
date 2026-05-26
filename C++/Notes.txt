@@ -1,3 +1,4 @@
 Ordered map: gurantees O(logn) TC for all operations~
 Unordered map: Mostly O(1) for all operations but in the worst case O(n)~
 
+Tip: For minHeap, We can use a standard max-heap and store negative values of their data

@@ -1,6 +1,7 @@
 // Use Heaps when you need to efficiently maintain order under continuous insertions, 
 // especially for "Top-K", "Min/Max", or "Median"-type problems.
 
+// Tip: For minHeap, We can use a standard max-heap and store negative values of their data
 
 #include<iostream>
 #include<string>

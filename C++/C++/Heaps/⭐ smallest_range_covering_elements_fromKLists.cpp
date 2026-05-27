@@ -1,5 +1,9 @@
 // https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/description/
 
+// Keep one element from every list at all times; the current minimum and maximum form a valid range.
+// Since lists are sorted, the only way to possibly shrink the range is to move the minimum element forward.
+// Use a min-heap to always get the smallest element quickly, while tracking the current maximum separately.
+
 #include <vector>
 #include <queue>
 #include <climits>

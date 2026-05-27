@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/reorganize-string/description/
+
 // Most efficient~ O(n) & O(1)
 
 // You first check feasibility with max_freq > (n+1)/2, which is key.

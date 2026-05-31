@@ -1,3 +1,5 @@
+// NEXT SMALLER, NEXT GREATER, brackets question are done using stacks and monotonic stacks~
+
 #include<iostream>
 #include<stack>
 using namespace std;

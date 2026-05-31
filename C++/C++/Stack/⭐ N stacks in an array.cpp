@@ -1,5 +1,7 @@
 // https://www.naukri.com/code360/problems/n-stacks-in-an-array_1164271?topList=love-babbar-dsa-sheet-problems&leftPanelTab=0%3Fsource%3Dyoutube&campaign=Lovebabbarcodestudio11thfeb&utm_source=youtube&utm_medium=affiliate&utm_campaign=Lovebabbarcodestudio11thfeb&leftPanelTabValue=SOLUTION
 
+// ⭐⭐⭐ THINK OF THIS QUESTION AS IMPLEMENTING LINKED LIST CONCEPS IN A ARRAY~
+
 // MORE OPTIMISED, using free array as both free and prev~
 
 #include <bits/stdc++.h> 

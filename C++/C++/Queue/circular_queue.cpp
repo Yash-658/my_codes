@@ -18,7 +18,7 @@ class CircularQueue{
         rear = -1;
     }
 
-    // Enqueues 'X' into the queue. Returns true if it gets pushed into the stack, and false otherwise.
+    // Enqueues 'X' into the queue. Returns true if it gets pushed into the queue, and false otherwise.
     bool enqueue(int value){
         // if full
         if((rear+1)%size == front) return false;
@@ -50,7 +50,7 @@ class CircularQueue{
 
         // single element
         if(front == rear) {
-            front = rear = -1;
+            front = rear = -1;            // resetting queue as its empty now~
         }
 
         // edge case

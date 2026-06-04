@@ -1,4 +1,4 @@
-// TC - O(n) and SC = O(2k)
+// TC - O(n) and SC = O(2k) BEST OPTIMAL SOLUTION WITH MONOTIC DEQEUES
 
 // #include <bits/stdc++.h> 
 // long long sumOfMaxAndMin(vector<int> &nums, int n, int k) {

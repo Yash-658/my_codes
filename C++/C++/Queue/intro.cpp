@@ -4,8 +4,8 @@
 #include<vector>
 using namespace std;
 
-// ADD MORE QUESTIONS TO THIS DIRECTORY WITH THE LOVE BABAR PLAYLIST, has soo much good questions~
-// stl
+// ⭐⭐⭐ for maximum or minimum of all subarrays, monotonic deque
+
 // int main(){
 //     queue<int> q;
 //     q.push(5);

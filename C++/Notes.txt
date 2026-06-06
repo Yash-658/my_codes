@@ -1,3 +1,5 @@
+BY DSA: THE SKILL YOU'RE TRAINING IS RECOGNIZING PATTERNS AND APPLYING THEM CORRECTLY
+
 Ordered map: gurantees O(logn) TC for all operations~
 Unordered map: Mostly O(1) for all operations but in the worst case O(n)~
 

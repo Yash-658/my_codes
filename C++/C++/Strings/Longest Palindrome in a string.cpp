@@ -1,8 +1,8 @@
 // https://leetcode.com/problems/longest-palindromic-substring/submissions/2025218180/
 
 
-// I HAVE NOT DONE THE MOST OPTIMIZED VERSION: Manacher's Algorithm O(n) O(1)
-
+// (NOT IMPORTANT AT ALL) there exists a more OPTIMIZED VERSION: Manacher's Algorithm O(n) O(1)
+// (can also be done thru dp, O(n^2) O(n^2) but my below optimized version is better)
 
 // INTUTION: Every palindrome is defined by its center. Instead of checking every substring, 
 // treat each index (and each gap between indices) as a center and expand outward while the characters match.

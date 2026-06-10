@@ -10,3 +10,9 @@ Unordered map: Mostly O(1) for all operations but in the worst case O(n)~
 Tip: For minHeap, We can use a standard max-heap and store negative values of their data
 
 for maximum or minimum of all subarrays, monotonic deque
+
+REVISION MARKS~
+
+if nothing, solved quickly
+🟠: needed hint to solve
+🔴: had to see the solution~

@@ -14,7 +14,7 @@
 //             }
             
 //             else{
-//                 inversions += mid-i+1;
+//                 inversions += mid-i+1;                    // as we know this arr[j] is smaller than all the numbers present in the first sorted arr, so add all those in inversions~
 //                 temp[curr++] = arr[j++];
 //             }
 //         }

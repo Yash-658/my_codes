@@ -6,7 +6,7 @@
 using namespace std;
 
 // QUICK SORT: -> it's in-place as it doesn't use any extra arrays to sort
-//             -> Memory usage is O(nlog n) due to the recursion stack (in the best and average case)
+//             -> Memory usage is O(log n) due to the recursion stack (in the best and average case)
 //             -> Quick sort is not stable by default
 
 

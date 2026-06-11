@@ -9,6 +9,7 @@
 // Since the majority element appears more than ⌊n/2⌋ times, it cannot be fully canceled by all other elements combined regardless the order.
 // Therefore, after all cancellations, the remaining candidate must be the majority element.
 
+// soldiers ke group wali analogy yaad rkhna~
 
 // class Solution {
 // public:

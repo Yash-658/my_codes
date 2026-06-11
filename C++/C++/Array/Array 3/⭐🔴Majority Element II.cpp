@@ -10,7 +10,7 @@
 // Cancel pairs → one survivor
 
 // n/3:
-// Cancel triples → two survivors
+// Cancel triples → two survivors   (BASICALLY 3 DISTINCT ELEMENTS AAJEYNGE JB CANCEL KRENGE~)
 
 // General form:
 // For > n/k → track k-1 candidates

@@ -41,59 +41,55 @@
 
 // class Solution {
 // public:
-//     vector<vector<int>> threeSum(vector<int>& nums) {
-        
-//         // Step 1: Sort the array
-//         // Sorting helps:
-//         // 1) Use two-pointer technique
-//         // 2) Skip duplicates easily
-//         sort(nums.begin(), nums.end());
+//     void decreaseThird(const vector<int>& nums, int second, int &third) {
+//         // make the sum smaller by decreasing third~
+//         third--;
+//         // remove duplicate processing~
+//         while(second < third && nums[third] == nums[third+1]) {
+//             third--;
+//         }
+//     }
 
+//     void increaseSecond(const vector<int>& nums, int &second, int third) {
+//         // make the sum greater by increasing 'second' index~
+//         second++;
+//         // remove duplicate processing~
+//         while(second < third && nums[second] == nums[second-1]) {
+//             second++;
+//         }
+//     }
+
+//     vector<vector<int>> threeSum(vector<int>& nums) {
+//         sort(nums.begin(), nums.end());
 //         vector<vector<int>> ans;
 //         int n = nums.size();
 
-//         // Step 2: Fix one element (nums[i])
-//         // We need at least 3 elements, so loop till n-2
-//         for (int i = 0; i < n - 2; i++) {
-
-//             // Skip duplicate fixed elements
-//             // Prevents duplicate triplets
-//             if (i > 0 && nums[i] == nums[i - 1])
-//                 continue;
-
-//             // Step 3: Two-pointer for remaining array
-//             int j = i + 1;      // left pointer
-//             int k = n - 1;      // right pointer
-
-//             while (j < k) {
-
-//                 int sum = nums[i] + nums[j] + nums[k];
-
-//                 if (sum == 0) {
-
-//                     // Found valid triplet
-//                     ans.push_back({nums[i], nums[j], nums[k]});
-
-//                     // Skip duplicates for left pointer
-//                     while (j < k && nums[j] == nums[j + 1])
-//                         j++;
-
-//                     // Skip duplicates for right pointer
-//                     while (j < k && nums[k] == nums[k - 1])
-//                         k--;
-
-//                     // Move both pointers inward
-//                     j++;
-//                     k--;
-//                 } 
-//                 else if (sum < 0) {
-//                     // Need bigger sum → move left forward
-//                     j++;
-//                 } 
-//                 else {
-//                     // Need smaller sum → move right backward
-//                     k--;
+//         int first = 0;
+//         while(first < n-2) {
+//             int second = first+1, third = n-1;
+//             int target = -nums[first];
+//             while(second < third) {
+//                 int sum = nums[second] + nums[third];
+//                 if(sum == target) {
+//                     ans.push_back({nums[first], nums[second], nums[third]});
+//                     increaseSecond(nums, second, third);
+//                     decreaseThird(nums, second, third);
 //                 }
+
+//                 else if(sum > target) {
+//                     decreaseThird(nums, second, third);
+//                 }
+
+//                 else{
+//                     increaseSecond(nums, second, third);
+//                 }
+//             }
+
+//             // increase first~
+//             first++;
+//             // remove duplicate processing~
+//             while(first < n-2 && nums[first] == nums[first-1]) {
+//                 first++;
 //             }
 //         }
 

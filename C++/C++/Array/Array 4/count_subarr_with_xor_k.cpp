@@ -3,26 +3,21 @@
 
 // INTUTION: used prefixXOR here~
 
-// class Solution {
-//   public:
-//     long subarrayXor(vector<int> &arr, int k) {
-//         unordered_map<int, int> prefixXOR;
-//         int curr_xor = 0, ans = 0;
-        
-//         for(int i = 0; i < arr.size(); i++) {
-//             curr_xor = curr_xor^arr[i];
-            
-//             if(curr_xor == k) ans++;
-            
-//             int to_find = curr_xor^k;
-            
-//             if(prefixXOR.find(to_find) != prefixXOR.end()) {
-//                 ans += prefixXOR[to_find];
-//             }
-            
-//             prefixXOR[curr_xor]++;
-//         }
-        
-//         return ans;
+// int subarraysXor(vector<int> &arr, int x)
+// {
+//     unordered_map<int,int> prefixXor;
+//     int ans = 0, curr_xor = 0;
+
+//     for(int curr: arr){
+//         curr_xor = curr_xor^curr;
+//         if(curr_xor == x) ans++;
+
+//         // add all the subarrays ending at curr with xor == x
+//         ans += prefixXor[curr_xor^x];
+
+//         // store this prefixXor
+//         prefixXor[curr_xor]++;
 //     }
-// };
+
+//     return ans;
+// }

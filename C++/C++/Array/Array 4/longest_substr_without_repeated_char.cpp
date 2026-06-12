@@ -17,7 +17,7 @@
             
 //             // If character is already seen AND lies inside current window,
 //             // move left pointer just after its previous occurrence
-//             if(lastSeen.count(curr) && lastSeen[curr] >= left) {
+//             if(lastSeen.contains(curr) && lastSeen[curr] >= left) {
 //                 left = lastSeen[curr] + 1;
 //             }
             

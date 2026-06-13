@@ -15,6 +15,10 @@ class Node {
 };
 
 // to check if a loop exists in LL
+// it always works if a loop exists cuz, once both enter loop, 
+// if cycle length = 'k', there's finite 'k' steps of a clock, and relatively fast is +1 and slow doesn't move, 
+// so eventually fast will meet slow in at most 'k' steps
+
 bool floydCycleDetection(Node *head) {
     Node* slow = head;
     Node* fast = head;

@@ -13,6 +13,9 @@ for maximum or minimum of all subarrays, monotonic deque
 
 REVISION MARKS~
 
-if nothing, solved quickly
+solved quickly - no marker
 🟠: needed hint to solve
 🔴: had to see the solution~
+
+PATTERNS:
+>> JB BHI LONGEST SUBARRAYS, ya subarr count krni ho with specifx sum, xor, we use PREFIX SUM OR PREFIX XOR METHODS

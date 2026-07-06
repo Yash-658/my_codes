@@ -1,41 +1,48 @@
 // https://leetcode.com/problems/trapping-rain-water/
 
 // MOST OPTIMAL APPROACH~ TC: O(N) SC:O(1)
-// understand why do we calculate the smaller level first in this approach ( if(l<r) we process l and vice versa )
 
-// kyuki ussi se apn conclude kr pa rhe bina exactly rightMax 
+// Your thought process becomes:
 
-// int trap(vector<int>& height) {
-//         // TC: O(n) SC: O(1)
+// I know the tallest wall on the left.
+// I know the tallest wall on the right.
+// Whichever maximum is smaller limits the water.
+// So I can safely process that side.
 
-//         int ans = 0, l = 0, r = height.size() - 1, leftMax = 0, rightMax = 0;
-        
-//         while(l < r) {
-//             if(height[l] < height[r]) {
-//                 // left process kro phele~
-//                 if(height[l] >= leftMax) leftMax = height[l];
-//                 else{
-//                     ans += leftMax - height[l];
-//                 }
+// class Solution {
+// public:
+//     int trap(vector<int>& height) {
+//         // MOST OPTIMAL (Intutive Two Pointer Approach)
+//         int n = height.size();
 
-//                 l++;
+//         int left = 0;
+//         int right = n - 1;
+
+//         int leftMax = 0;
+//         int rightMax = 0;
+
+//         int water = 0;
+
+//         while (left <= right) {
+
+//             leftMax = max(leftMax, height[left]);
+//             rightMax = max(rightMax, height[right]);
+
+//             if (leftMax < rightMax) {
+//                 water += leftMax - height[left];
+//                 left++;
 //             }
-
-//             else{
-//                 //right process kro 
-//                 if(height[r] >= rightMax) rightMax = height[r];
-//                 else{
-//                     ans += rightMax - height[r];
-//                 }
-
-//                 r--;
+//             else {
+//                 water += rightMax - height[right];
+//                 right--;
 //             }
 //         }
 
-//         return ans;
-// }
+//         return water;
+//     }
+// };
 
-// BETTER APPROACH~ TC: O(N) SC: O(N)
+// ANOTHER APPROACH~ TC: O(N) SC: O(N)
 /*
 class Solution {
 public:

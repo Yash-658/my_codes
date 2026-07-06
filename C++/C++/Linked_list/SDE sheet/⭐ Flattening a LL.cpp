@@ -1,4 +1,5 @@
 // MOST ELEGANT: Divide & conquer (like merge sort, merging in pairs) TC: O(K log N)  SC: O(log N)
+// ⭐⭐⭐ here K = total no. of nodes~
 
 // Node* mergeLL(Node* first, Node* second) {
 // 	Node* dummy = new Node(-1), *temp = dummy;
@@ -65,7 +66,6 @@
 // 	// now merge~
 // 	return mergeLL(first, second);
 // }
-
 
 // This is Sequential merging, O(K * N) O(1)    >> here K = total no. of nodes~
 

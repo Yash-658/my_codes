@@ -9,8 +9,6 @@ Unordered map: Mostly O(1) for all operations but in the worst case O(n)~
 
 Tip: For minHeap, We can use a standard max-heap and store negative values of their data
 
-for maximum or minimum of all subarrays, monotonic deque
-
 REVISION MARKS~
 
 solved quickly - no marker
@@ -19,3 +17,5 @@ solved quickly - no marker
 
 PATTERNS:
 >> JB BHI LONGEST SUBARRAYS, ya subarr count krni ho with specifx sum, xor, we use PREFIX SUM OR PREFIX XOR METHODS
+>> for maximum or minimum of all subarrays, monotonic deque
+>> If you're repeatedly asking "what is the next/previous available item after removing or merging items?", think DSU.

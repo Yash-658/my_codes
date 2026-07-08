@@ -33,8 +33,9 @@
 // };
 
 // OPTIMISED VERSION WITH ORDERED_SET and upperbound~ O(nlogn) O(n)
+// ⭐⭐⭐ CAN ALSO BE IMPLEMENTED THRU DSU, same asymptomatic TC but better constant factors~
 
-// upper_bound(x) → next bigger element
+// upper_bound(x) → next bigger element, element just greater than x
 // --it → step back → best valid slot
 
 // vector<int> jobSequencing(vector<int> &deadline, vector<int> &profit) {

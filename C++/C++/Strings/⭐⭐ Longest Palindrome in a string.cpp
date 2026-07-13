@@ -2,13 +2,15 @@
 
 
 // (NOT IMPORTANT AT ALL) there exists a more OPTIMIZED VERSION: Manacher's Algorithm O(n) O(1)
-// (can also be done thru dp, O(n^2) O(n^2) but my below optimized version is better)
+// (done thru dp below too, O(n^2) O(n^2) but my below optimized version is better)
 
 // INTUTION: Every palindrome is defined by its center. Instead of checking every substring, 
 // treat each index (and each gap between indices) as a center and expand outward while the characters match.
 // The longest expansion across all centers is the answer.
 
-// OPTIMIZED O(N^2) O(1)
+// ⭐EXPAND AROUND CENTER O(N^2) O(1) 
+// INTUTION: Instead of checking every possible substring and asking "Is this a palindrome?", 
+// start from every possible palindrome center and grow outward until it can't grow anymore.
 
 // class Solution {
 // public:
@@ -43,6 +45,50 @@
 //         return s.substr(start, maxLen);
 //     }
 // };
+
+
+// DP O(n^2) O(n^2)
+
+// class Solution {
+// public:
+//     string longestPalindrome(string s) {
+//         int n = s.size();
+//         vector<vector<bool>> dp(n, vector<bool>(n, false));
+
+//         int start = 0, maxLen = 1;
+
+//         // for length = 1~
+//         for (int i = 0; i < n; i++) {
+//             dp[i][i] = true;
+//         }
+
+//         // for length = 2~
+//         for (int i = 0; i < n - 1; i++) {
+//             if (s[i] == s[i + 1]) {
+//                 dp[i][i + 1] = true;
+//                 start = i;
+//                 maxLen = 2;
+//             }
+//         }
+
+//         // for length = 3+
+//         for (int len = 3; len <= n; len++) {
+//             for (int i = 0; i < n - len + 1; i++) {
+//                 int j = i + len - 1;
+//                 if (s[i] == s[j] && dp[i + 1][j - 1]) {
+//                     dp[i][j] = true;
+//                     if(maxLen < len) {
+//                         start = i;
+//                         maxLen = len;
+//                     }
+//                 }
+//             }
+//         }
+
+//         return s.substr(start, maxLen);
+//     }
+// };
+
 
 // brute force O(n^3) O(1)
 

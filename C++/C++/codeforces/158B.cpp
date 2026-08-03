@@ -62,3 +62,49 @@ int main() {
     cout<<helper(n, groups);
     return 0;
 }
+
+
+// ANOTHER APPROACH O(nlogn) O(1) 
+
+#include<iostream>
+#include<unordered_map>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int helper(int n, vector<int> groups) {
+    sort(groups.begin(), groups.end());
+    int ans = 0;
+    int i = 0, j = n-1, sum = 0;
+    
+    while(i < j) {
+        if(sum == 0) sum = groups[i] + groups[j];
+        else sum += groups[i];
+        
+        if(sum > 4) {
+            ans++;
+            j--;
+            sum = 0;
+        }
+        
+        else{
+            i++;
+        }
+    }
+    
+    return ++ans;
+}
+
+int main() {
+    int n;
+    cin>>n;
+    
+    vector<int> groups(n);
+    
+    for(int i = 0; i < n; i++) {
+        cin>>groups[i];
+    }
+    
+    cout<<helper(n, groups);
+    return 0;
+}

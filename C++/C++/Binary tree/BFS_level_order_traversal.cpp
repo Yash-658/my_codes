@@ -87,6 +87,7 @@ void reverseLevelOrderTraversal(node *root) {
                 q.push(temp->left);
             }
         }
+        
     }
 
     while(!st.empty()) {
@@ -152,18 +153,18 @@ void leafNodes(node *root) {      // preorder dfs
 int main(){
     node *root;
     /* 1 2 3 -1 -1 4 -1 -1 5 6 -1 -1 -1 */ 
-    // root = buildTree(root);
-    // cout<<endl;
-    // cout<<"Printing tree breadth first~"<<endl;
-    // levelOrderTraversal(root);
-    
-    // reverseLevelOrderTraversal(root);
-
-    buildFromLevelOrder(root);
+    root = buildTree(root);
     cout<<endl;
+    cout<<"Printing tree breadth first~"<<endl;
     levelOrderTraversal(root);
+    
+    reverseLevelOrderTraversal(root);
 
-    leafNodes(root);
+    // buildFromLevelOrder(root);
+    // cout<<endl;
+    // levelOrderTraversal(root);
+
+    // leafNodes(root);
 
 
 return 0;

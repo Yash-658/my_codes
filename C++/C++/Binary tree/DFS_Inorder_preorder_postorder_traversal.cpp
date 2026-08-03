@@ -15,9 +15,12 @@ L -> left part mai jao
 N -> current node print kro
 R -> right part mai jao
 
+// Time: O(n)
+// Auxiliary Space: O(h)
+
 */
 
-// how will you do this iteratively?
+// ⭐⭐⭐ how will you do this iteratively?
 
 void Inorder(node *root) {
     // LNR

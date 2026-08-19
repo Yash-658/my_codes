@@ -1,28 +1,40 @@
+// https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/description/
 
+// TC: O(nlogn) SC:O(n)
 
-// vector<vector<int>> verticalOrder(Node *root) {
+// If multiple nodes in the same row and same column. In such a case, sort these nodes by their values
+// class Solution {
+// public:
+//     vector<vector<int>> verticalTraversal(TreeNode* root) {
 //         vector<vector<int>> ans;
-//         map<int,vector<int>> col_mapping;
-        
-//         queue<pair<Node*, int>> q;
+//         map<int, vector<int>> levelNodes;
+
+//         queue<pair<TreeNode*, int>> q;
 //         q.push({root, 0});
-        
+
 //         while(!q.empty()) {
-//             pair<Node*, int> p = q.front();
-//             q.pop();
-        
-//             Node *curr_node = p.first;
-//             int col = p.second;
-            
-//             col_mapping[col].push_back(curr_node->data);
-            
-//             if(curr_node->left) q.push({curr_node->left, col-1});
-//             if(curr_node->right) q.push({curr_node->right, col+1});
+//             int currSize = q.size();
+//             unordered_map<int, vector<int>> temp;
+//             for(int i = 0; i < currSize; i++) {
+//                 auto [currNode, level] = q.front();
+//                 q.pop();
+
+//                 temp[level].push_back(currNode->val);
+//                 if(currNode->left) q.push({currNode->left, level-1});   
+//                 if(currNode->right) q.push({currNode->right, level+1});
+//             }
+
+//             for(auto &[col, list]: temp) {
+//                 sort(list.begin(), list.end());
+//                 levelNodes[col].insert(levelNodes[col].end(), list.begin(), list.end());
+//             }
 //         }
-        
-//         for(const auto& pair: col_mapping) {
-//             ans.push_back(pair.second);
+
+
+//         for(auto [_,list]: levelNodes) {
+//             ans.push_back(list);
 //         }
-        
+
 //         return ans;
 //     }
+// };

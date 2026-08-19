@@ -10,13 +10,13 @@
 
 //         while(!q.empty()) {
 //             int currSize = q.size();
-//             int startPos = q.front().second;
+//             long long startPos = q.front().second;
 //             for(int i = 0; i < currSize; i++) {
 //                 auto [curr, currPos] = q.front();
 //                 q.pop();
 
-//                 int pos = currPos - startPos;
-//                 maxWidth = max(maxWidth, pos + 1);
+//                 long long pos = currPos - startPos;
+//                 maxWidth = max(maxWidth, (int)pos + 1);
 
 //                 if(curr->left) q.push({curr->left, 1LL*2*pos});
 //                 if(curr->right) q.push({curr->right, 1LL*2*pos + 1});

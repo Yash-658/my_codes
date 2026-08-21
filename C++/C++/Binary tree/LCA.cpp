@@ -18,3 +18,54 @@
     //     // if one of them is NULL, return the other one, (if both NULL then this will return NULL)
     //     return (!left ? right:left);.
     // }
+
+    // SAME TC AND SC, but the above one is soo much more elegant~
+
+    // pair<bool, bool> dfs(TreeNode* curr, TreeNode* p, TreeNode* q, TreeNode* &LCA) {
+    //     // base case~
+    //     if(!curr) return {false, false};
+
+    //     pair<bool, bool> lTree = dfs(curr->left, p, q, LCA);
+    //     pair<bool, bool> rTree = dfs(curr->right, p, q, LCA);
+
+    //     if(LCA) return {true, true};
+
+    //     if(curr == p) {
+    //         // if any of its child saw q~
+    //         if(lTree.second || rTree.second) {
+    //             LCA = curr;
+    //             return {true, true};
+    //         }
+
+    //         else{
+    //             return {true, false};
+    //         }
+    //     }
+
+    //     else if(curr == q) {
+    //         // if any of its child saw p~
+    //         if(lTree.first || rTree.first) {
+    //             LCA = curr;
+    //             return {true, true};
+    //         }
+
+    //         else{
+    //             return {false, true};
+    //         }
+
+    //     }
+
+    //     else if((lTree.first || rTree.first) && (lTree.second || rTree.second)) {
+    //         // if both p and q aren't connected and so this is the LCA
+    //         LCA = curr;
+    //         return {true, true};
+    //     } 
+
+    //     return {(lTree.first || rTree.first) , (lTree.second || rTree.second)};
+    // } 
+
+    // TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+    //     TreeNode* LCA = NULL;
+    //     dfs(root, p, q, LCA);
+    //     return LCA;
+    // }

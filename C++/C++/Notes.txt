@@ -7,7 +7,12 @@ NO CODE DUPLICATION, USE FUNCTIONS WHERE EVER YOU CAN~
 Ordered map: gurantees O(logn) TC for all operations~
 Unordered map: Mostly O(1) for all operations but in the worst case O(n)~
 
-⭐ You can separate space-separated values from a string in C++ by using std::stringstream
+⭐ You can separate space-separated values (int/string/char anything) from a string in C++ by using std::stringstream
+string text = "apple banana cherry grape";
+stringstream ss(text);
+while (ss >> word) {
+     vector.push_back(word);
+}
 
 Tip: For minHeap, We can use a standard max-heap and store negative values of their data
      JB BHI FREQ AAYE, BUCKET SORT SOCHNA

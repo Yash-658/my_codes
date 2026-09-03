@@ -11,69 +11,61 @@ using namespace std;
 // THIS IS CLASSIC BFS APPROACH FOR CYCLE DETECTING
 // if a node is already visited and it's not the parent node of the current node, then there's a cycle
 
-// void createAdj(vector<vector<int>> &adj, vector<vector<int>> &edges) {
-//     for(const auto &pair: edges) {
-//         adj[pair[0]].push_back(pair[1]);
-//         adj[pair[1]].push_back(pair[0]);
-//     }
-// }
-
 // string cycleDetection (vector<vector<int>>& edges, int n, int m)
 // {
-//     vector<vector<int>> adj(n+1);
-//     createAdj(adj, edges);
+//     vector<vector<int>> adjList(n+1);
 
+//     for(vector<int> &edge: edges) {
+//         adjList[edge[0]].push_back(edge[1]);
+//         adjList[edge[1]].push_back(edge[0]);
+//     }
+
+//     // graph can be disconnected~
+//     // output as a string, "Yes", "No"
+
+//     // bfs
+
+//     vector<bool> visited(n+1, false);
+//     vector<int> parent(n+1);
 //     queue<int> q;
-//     unordered_map<int,bool> visited;
-//     unordered_map<int,int> child_parent;
-
+    
 //     for(int i = 1; i <= n; i++) {
 //         if(!visited[i]) {
-//             q.push(i);
 //             visited[i] = true;
-//             child_parent[i] = -1;
-
+//             parent[i] = -1;
+//             q.push(i);
 //             while(!q.empty()) {
-//                 int temp = q.front();
+//                 int curr = q.front();
 //                 q.pop();
 
-//                 for(const int &i: adj[temp]) {
-//                     if(visited[i] && child_parent[temp] != i) {
-//                         return "Yes";
-//                     }
-
-//                     if(!visited[i]) {
-//                         q.push(i);
-//                         visited[i] = true;
-//                         child_parent[i] = temp;
-//                     }
+//                 for(int adj: adjList[curr]) {
+//                     if(parent[curr] == adj) continue;
+//                     if(visited[adj]) return "Yes";
+//                     visited[adj] = true;
+//                     parent[adj] = curr;
+//                     q.push(adj);
 //                 }
 //             }
 //         }
 //     }
+    
 //     return "No";
 // }
 
 
 // THIS IS THE DFS APPROACH~
 
-// void createAdj(vector<vector<int>> &adj, vector<vector<int>> &edges) {
-//     for(const auto &pair: edges) {
-//         adj[pair[0]].push_back(pair[1]);
-//         adj[pair[1]].push_back(pair[0]);
-//     }
-// }
+// bool dfs(int curr, const vector<vector<int>> &adjList, vector<int> &parent, vector<bool> &visited) {
+//     if(visited[curr]) return true;
 
-// bool isCycle(int i, vector<vector<int>> &adj, unordered_map<int,int> &visited,
-// unordered_map<int,int> &child_parent) 
-// {
-//     visited[i] = true;
+//     visited[curr] = true;
 
-//     for(const auto &element: adj[i]) {
-//         if(visited[element] && child_parent[i] != element) return true;
-//         if(!visited[element]) {
-//             child_parent[element] = i;
-//             if(isCycle(element, adj, visited, child_parent)) return true;
+//     for(int adj: adjList[curr]) {
+//         if(parent[curr] == adj) continue;
+
+//         parent[adj] = curr;
+//         if(dfs(adj, adjList, parent, visited)) {
+//             return true;
 //         }
 //     }
 
@@ -82,17 +74,27 @@ using namespace std;
 
 // string cycleDetection (vector<vector<int>>& edges, int n, int m)
 // {
-//     vector<vector<int>> adj(n+1);
-//     createAdj(adj, edges);
-//     unordered_map<int,int> child_parent; 
-//     unordered_map<int,int> visited;
+//     vector<vector<int>> adjList(n+1);
 
+//     for(vector<int> &edge: edges) {
+//         adjList[edge[0]].push_back(edge[1]);
+//         adjList[edge[1]].push_back(edge[0]);
+//     }
+
+//     // graph can be disconnected~
+//     // output as a string, "Yes", "No"
+
+//     // dfs
+
+//     vector<bool> visited(n+1, false);
+//     vector<int> parent(n+1);
+    
 //     for(int i = 1; i <= n; i++) {
 //         if(!visited[i]) {
-//             child_parent[i] = -1;
-//             bool ans = isCycle(i, adj, visited, child_parent);
-//             if(ans) return "Yes";
+//             parent[i] = -1;
+//             if(dfs(i, adjList, parent, visited)) return "Yes";
 //         }
 //     }
+    
 //     return "No";
 // }

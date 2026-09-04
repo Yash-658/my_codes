@@ -36,7 +36,7 @@
 //     return res;
 // }
 
-// Topological Sort ( Using Kahn's Algorithm or BFS)
+// Topological Sort ( Using Kahn's Algorithm or BFS)  Kahn = repeatedly remove indegree-0 nodes; reducing indegrees exposes the next nodes.
 
 // vector<int> topologicalSort(vector<vector<int>> &edges, int v, int e)  {
 //     vector<int> ans;

@@ -10,11 +10,9 @@
 // 2. we can split the nodes of the graph
 //    (vertex set of the graph) into 2 subsets so
 //    that there is all the edges go from 1 subset
-//    to the other subset.
+//    to the other subset, and there's no edge between the vertices of same set~
 
-// 3.The graph should be bi-colourable.
-
-// class Solution {
+// class Solution {                                         // our approach indirectly checks if graph contains an odd-length cycle~ 
 // public:
 //     bool isBipartite(vector<vector<int>>& graph) {
 //         vector<int> color(graph.size(), -1);

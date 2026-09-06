@@ -4,34 +4,37 @@
 
 // TC: O((V + E) log V)
 
-// #include <bits/stdc++.h> 
-// vector<int> dijkstra(vector<vector<int>> &vec, int vertices, int edges, int source) {
-//     vector<vector<pair<int, int>>> adj(vertices);
-//     for(const auto &edge: vec) {
-//         adj[edge[0]].push_back({edge[1], edge[2]});
-//         adj[edge[1]].push_back({edge[0], edge[2]});
-//     }
-
-//     vector<int> distance(vertices, INT_MAX);      
-//     distance[source] = 0;
-//     set<pair<int, int>> distanceNode;
-//     distanceNode.insert({source, 0});
-
-//     while(!distanceNode.empty()) {
-//         pair<int, int> top = *(distanceNode.begin());            // .begin() will give the iterator, * will give the value
-//         distanceNode.erase(distanceNode.begin());
-
-//         // process for all its neighbours~
-//         for(const auto &pair: adj[top.second]) {
-//             int disFromSrc = top.first + pair.second;                       // total distance from source to the neighbour of top, through the top node
-//             if(distance[pair.first] > disFromSrc) {
-//                 // abh ise set mai insert kro, but insert krne se phele check if theres already a pair with this node in the set~
-//                 if(distance[pair.first] != INT_MAX) distanceNode.erase({distance[pair.first], pair.first});
-//                 distanceNode.insert({disFromSrc, pair.first});
-//                 distance[pair.first] = disFromSrc;
+// class Solution {
+//   public:
+//     vector<int> dijkstra(int V, vector<vector<int>> &edges, int src) {
+//         vector<vector<pair<int,int>>> adjList(V);
+//         for(auto &edge: edges) {
+//             adjList[edge[0]].push_back({edge[1], edge[2]});
+//             adjList[edge[1]].push_back({edge[0], edge[2]});
+//         }
+        
+//         priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> minHeap;
+//         vector<int> ans(V, INT_MAX);
+//         ans[src] = 0;
+//         minHeap.push({0, src});
+        
+//         while(!minHeap.empty()) {
+//             auto [dis, node] = minHeap.top();
+//             minHeap.pop();
+            
+//             if(dis > ans[node]) {            // for stale entries~
+//                 continue;
+//             }
+            
+//             for(auto [adj, adjDis]: adjList[node]) {
+//                 int disFromSrc = dis + adjDis;
+//                 if(disFromSrc < ans[adj]) {
+//                     ans[adj] = disFromSrc;
+//                     minHeap.push({disFromSrc, adj});
+//                 }
 //             }
 //         }
+        
+//         return ans;
 //     }
-
-//     return distance;
-// }
+// };
